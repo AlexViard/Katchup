@@ -608,3 +608,460 @@ FOREIGN KEY ("item_id")
   [1m[36mOrder Create (1.4ms)[0m  [1m[32mINSERT INTO "orders" ("created_at", "updated_at", "user_id", "item_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-11-25 13:22:22.698628"], ["updated_at", "2019-11-25 13:22:22.698628"], ["user_id", 2], ["item_id", 2]]
   [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[35m (609.7ms)[0m  [1m[35mCREATE DATABASE "Katchup_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (430.5ms)[0m  [1m[35mCREATE DATABASE "Katchup_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (22.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (46.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906419862699323360)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateItems (20191125113559)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (63.9ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "title" character varying, "descript" text, "price" decimal, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113559_create_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113559"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateOrders (20191125113620)
+  [1m[35m (40.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113620_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113620"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCarts (20191125113630)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113630_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113630"]]
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20191125114035)
+  [1m[35m (41.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "first_name" character varying, "last_name" character varying, "is_admin" boolean, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:5
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:42
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:43
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125114035"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkCartUser (20191125123404)
+  [1m[35m (43.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mALTER TABLE "users" ADD "cart_id" bigint[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_cart_id" ON "users"  ("cart_id")[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[35m (11.7ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_1d13818f0e"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125123404"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkItemsCart (20191125123736)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "carts" ADD "item_id" bigint[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (37.0ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_item_id" ON "carts"  ("item_id")[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_201d6b691f"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "carts" ADD "user_id" bigint[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_user_id" ON "carts"  ("user_id")[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_ea59a35211"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125123736"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkOrderUser (20191125125010)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "orders" ADD "user_id" bigint[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_user_id" ON "orders"  ("user_id")[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "orders" ADD "item_id" bigint[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_item_id" ON "orders"  ("item_id")[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_fc971cd604"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125125010"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (5.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-25 14:36:02.431431"], ["updated_at", "2019-11-25 14:36:02.431431"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906419862699323360)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (48.9ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:04.967294"], ["updated_at", "2019-11-25 14:49:04.967294"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.023572"], ["updated_at", "2019-11-25 14:49:05.023572"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.029517"], ["updated_at", "2019-11-25 14:49:05.029517"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.034936"], ["updated_at", "2019-11-25 14:49:05.034936"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.040666"], ["updated_at", "2019-11-25 14:49:05.040666"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.045362"], ["updated_at", "2019-11-25 14:49:05.045362"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.049520"], ["updated_at", "2019-11-25 14:49:05.049520"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.053436"], ["updated_at", "2019-11-25 14:49:05.053436"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.057928"], ["updated_at", "2019-11-25 14:49:05.057928"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Create (2.2ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "[\"../app/assets/images/1.jpg\", \"../app/assets/images/2.jpg\", \"../app/assets/images/3.jpg\", \"../app/assets/images/4.jpg\", \"../app/assets/images/5.jpg\", \"../app/assets/images/6.jpg\", \"../app/assets/images/7.jpg\", \"../app/assets/images/8.jpg\", \"../app/assets/images/9.jpg\", \"../app/assets/images/10.jpg\"]"], ["created_at", "2019-11-25 14:49:05.068791"], ["updated_at", "2019-11-25 14:49:05.068791"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (48.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/1.jpg"], ["created_at", "2019-11-25 14:52:23.941266"], ["updated_at", "2019-11-25 14:52:23.941266"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/2.jpg"], ["created_at", "2019-11-25 14:52:23.946702"], ["updated_at", "2019-11-25 14:52:23.946702"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/3.jpg"], ["created_at", "2019-11-25 14:52:23.951111"], ["updated_at", "2019-11-25 14:52:23.951111"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/4.jpg"], ["created_at", "2019-11-25 14:52:23.961717"], ["updated_at", "2019-11-25 14:52:23.961717"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/5.jpg"], ["created_at", "2019-11-25 14:52:23.966113"], ["updated_at", "2019-11-25 14:52:23.966113"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/6.jpg"], ["created_at", "2019-11-25 14:52:23.970029"], ["updated_at", "2019-11-25 14:52:23.970029"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/7.jpg"], ["created_at", "2019-11-25 14:52:23.974453"], ["updated_at", "2019-11-25 14:52:23.974453"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/8.jpg"], ["created_at", "2019-11-25 14:52:23.979015"], ["updated_at", "2019-11-25 14:52:23.979015"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/9.jpg"], ["created_at", "2019-11-25 14:52:23.983209"], ["updated_at", "2019-11-25 14:52:23.983209"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "zeze"], ["descript", "rzer"], ["price", "0.0"], ["image_url", "../app/assets/images/10.jpg"], ["created_at", "2019-11-25 14:52:23.987281"], ["updated_at", "2019-11-25 14:52:23.987281"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Carrot"], ["descript", "[\"Dolorem praesentium maiores.\", \"Necessitatibus dolor possimus.\", \"Nihil aut voluptatem.\"]"], ["price", "13.82"], ["image_url", "../app/assets/images/1.jpg"], ["created_at", "2019-11-25 14:57:44.969289"], ["updated_at", "2019-11-25 14:57:44.969289"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Red Pepper"], ["descript", "[\"Et corrupti autem.\", \"Voluptatem ea nam.\", \"Ea at nemo.\"]"], ["price", "26.65"], ["image_url", "../app/assets/images/2.jpg"], ["created_at", "2019-11-25 14:57:45.015684"], ["updated_at", "2019-11-25 14:57:45.015684"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Arugula"], ["descript", "[\"Sint aut sunt.\", \"Laudantium rem harum.\", \"Et repellat numquam.\"]"], ["price", "66.39"], ["image_url", "../app/assets/images/3.jpg"], ["created_at", "2019-11-25 14:57:45.020032"], ["updated_at", "2019-11-25 14:57:45.020032"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Peas"], ["descript", "[\"Excepturi praesentium commodi.\", \"Ut dolorem animi.\", \"Soluta voluptatem adipisci.\"]"], ["price", "33.71"], ["image_url", "../app/assets/images/4.jpg"], ["created_at", "2019-11-25 14:57:45.023957"], ["updated_at", "2019-11-25 14:57:45.023957"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Broccolini"], ["descript", "[\"Omnis dolorum quo.\", \"Et accusantium voluptates.\", \"Omnis atque vel.\"]"], ["price", "29.74"], ["image_url", "../app/assets/images/5.jpg"], ["created_at", "2019-11-25 14:57:45.028644"], ["updated_at", "2019-11-25 14:57:45.028644"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Okra"], ["descript", "[\"Quia laborum eos.\", \"Nobis vero in.\", \"Aut voluptatem nostrum.\"]"], ["price", "74.82"], ["image_url", "../app/assets/images/6.jpg"], ["created_at", "2019-11-25 14:57:45.033087"], ["updated_at", "2019-11-25 14:57:45.033087"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Broccolini"], ["descript", "[\"In mollitia hic.\", \"Assumenda id fuga.\", \"Beatae consequatur modi.\"]"], ["price", "38.46"], ["image_url", "../app/assets/images/7.jpg"], ["created_at", "2019-11-25 14:57:45.037092"], ["updated_at", "2019-11-25 14:57:45.037092"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bok Choy"], ["descript", "[\"Officia aut nihil.\", \"In ipsum vel.\", \"Quo id est.\"]"], ["price", "33.57"], ["image_url", "../app/assets/images/8.jpg"], ["created_at", "2019-11-25 14:57:45.040948"], ["updated_at", "2019-11-25 14:57:45.040948"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Artichoke"], ["descript", "[\"Officia consequatur labore.\", \"Est dolores soluta.\", \"Asperiores provident corporis.\"]"], ["price", "47.66"], ["image_url", "../app/assets/images/9.jpg"], ["created_at", "2019-11-25 14:57:45.044948"], ["updated_at", "2019-11-25 14:57:45.044948"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fresh Chillies"], ["descript", "[\"Saepe sint possimus.\", \"Error enim qui.\", \"Dolores fugit nihil.\"]"], ["price", "49.11"], ["image_url", "../app/assets/images/10.jpg"], ["created_at", "2019-11-25 14:57:45.048715"], ["updated_at", "2019-11-25 14:57:45.048715"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
