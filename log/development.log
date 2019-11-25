@@ -38278,6 +38278,7 @@ Completed 200 OK in 2150ms (Views: 2067.5ms | ActiveRecord: 79.6ms)
 =======
 >>>>>>> 3f4fd9bebe8ba7800371468ebcdd3e5a62aaf3c6
 >>>>>>> 0d9bfb8224a3e039b3856d73172dc45f6ac2162d
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2019-11-25 20:29:38 +0100
   [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/alex/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
@@ -41396,10 +41397,50 @@ puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Started GET "/" for ::1 at 2019-11-25 20:32:59 +0100
+=======
+Started GET "/carts/8" for 127.0.0.1 at 2019-11-25 20:38:32 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ludo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/views/carts/show.html.erb:14
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  Rendered carts/show.html.erb within layouts/application (144.3ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 39.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `stripe' for #<Rails::Application::Configuration:0x000055bdd5d889a0>):
+    18:             <%end%>
+    19:             <p class="card-text">Prix total : <%=prix_total%>€</p>
+    20:             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    21:                     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    22:                     data-description="Inscription à l'événement"
+    23:                     data-amount="<%=prix_total * 100%>"
+    24:                     data-locale="auto"></script>
+  
+app/views/carts/show.html.erb:21:in `block in _app_views_carts_show_html_erb__1198892942319294239_70292240184740'
+app/views/carts/show.html.erb:1:in `_app_views_carts_show_html_erb__1198892942319294239_70292240184740'
+Started GET "/" for 127.0.0.1 at 2019-11-25 20:38:37 +0100
+>>>>>>> f4e3d4d71b14deaa069d01646711d499122f41ca
 Processing by ItemsController#index as HTML
   Rendering items/index.html.erb within layouts/application
   [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
   ↳ app/views/items/index.html.erb:43
+<<<<<<< HEAD
   Rendered items/index.html.erb within layouts/application (3.4ms)
 Started GET "/app/assets/images/8.jpg" for ::1 at 2019-11-25 20:32:59 +0100
   
@@ -41435,3 +41476,106 @@ puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Completed 200 OK in 2106ms (Views: 2100.9ms | ActiveRecord: 1.0ms)
 
 
+=======
+  Rendered items/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 2718ms (Views: 2713.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2019-11-25 20:38:48 +0100
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/carts/show.html.erb:14
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  Rendered carts/show.html.erb within layouts/application (31.7ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `stripe' for #<Rails::Application::Configuration:0x000055bdd5d889a0>):
+    18:             <%end%>
+    19:             <p class="card-text">Prix total : <%=prix_total%>€</p>
+    20:             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    21:                     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    22:                     data-description="Inscription à l'événement"
+    23:                     data-amount="<%=prix_total * 100%>"
+    24:                     data-locale="auto"></script>
+  
+app/views/carts/show.html.erb:21:in `block in _app_views_carts_show_html_erb__1198892942319294239_70292072570220'
+app/views/carts/show.html.erb:1:in `_app_views_carts_show_html_erb__1198892942319294239_70292072570220'
+Started GET "/carts/3" for 127.0.0.1 at 2019-11-25 20:43:58 +0100
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ludo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/carts/show.html.erb:14
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  Rendered carts/show.html.erb within layouts/application (118.7ms)
+Completed 200 OK in 1130ms (Views: 936.8ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/carts/3" for 127.0.0.1 at 2019-11-25 20:55:45 +0100
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ludo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (3.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/carts/show.html.erb:14
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  Rendered carts/show.html.erb within layouts/application (114.4ms)
+Completed 200 OK in 1351ms (Views: 1210.0ms | ActiveRecord: 34.3ms)
+
+
+Started POST "/users/3/charges" for 127.0.0.1 at 2019-11-25 20:56:18 +0100
+  
+SyntaxError (/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected ':', expecting ')'
+	  		Order.create(user_id	: params[:user_id], item_id: t...
+	  		                    	^
+/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+...id	: params[:user_id], item_id: t.item_id)
+...  	                    ^~~~~~~~
+/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected ')', expecting keyword_end
+...[:user_id], item_id: t.item_id)
+...                              ^):
+  
+app/controllers/charges_controller.rb:27: syntax error, unexpected ':', expecting ')'
+app/controllers/charges_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/charges_controller.rb:27: syntax error, unexpected ')', expecting keyword_end
+>>>>>>> f4e3d4d71b14deaa069d01646711d499122f41ca
