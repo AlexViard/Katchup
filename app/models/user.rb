@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :items, through: :cart
   has_one_attached :image_url
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  #validates :first_name, presence: true
+  #validates :last_name, presence: true
 end

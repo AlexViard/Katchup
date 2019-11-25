@@ -12,10 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- Fonts and icons End -->
-    
+
   </head>
 
   <body>
+
+    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class:"btn btn-outline-light my-2 my-sm-0", style:"background-color:white; color:#9F221F; border-color:#9F221F;" %>
+
+
     <%= yield %>
   </body>
 </html>
