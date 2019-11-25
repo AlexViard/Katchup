@@ -1095,6 +1095,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2019-11-25 16:05:59 +0100
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
@@ -1113,6 +1114,197 @@ Started GET "/images/img_2.jpg" for 127.0.0.1 at 2019-11-25 16:06:00 +0100
 ActionController::RoutingError (No route matches [GET] "/images/person_4.jpg"):
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+=======
+<<<<<<< HEAD
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Endive"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sint rem distinctio.\", \"Voluptates ducimus deserunt.\", \"Numquam id sed.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (1.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Endive"], ["descript", "[\"Sint rem distinctio.\", \"Voluptates ducimus deserunt.\", \"Numquam id sed.\"]"], ["price", "69.89"], ["image_url", "../app/assets/images/1.jpg"], ["created_at", "2019-11-25 15:07:59.974900"], ["updated_at", "2019-11-25 15:07:59.974900"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Cabbage"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sunt eius pariatur.\", \"Rerum in sed.\", \"Ea magni quas.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cabbage"], ["descript", "[\"Sunt eius pariatur.\", \"Rerum in sed.\", \"Ea magni quas.\"]"], ["price", "35.18"], ["image_url", "../app/assets/images/2.jpg"], ["created_at", "2019-11-25 15:08:00.025901"], ["updated_at", "2019-11-25 15:08:00.025901"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Radish"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Error placeat inventore.\", \"Iusto aut iste.\", \"Odio quos dolorem.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Radish"], ["descript", "[\"Error placeat inventore.\", \"Iusto aut iste.\", \"Odio quos dolorem.\"]"], ["price", "33.74"], ["image_url", "../app/assets/images/3.jpg"], ["created_at", "2019-11-25 15:08:00.037108"], ["updated_at", "2019-11-25 15:08:00.037108"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Okra"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Dolorum iusto unde.\", \"In consequuntur et.\", \"Expedita quaerat dolores.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Capers"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sint facere non.\", \"Maiores adipisci temporibus.\", \"Veniam illo pariatur.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Capers"], ["descript", "[\"Sint facere non.\", \"Maiores adipisci temporibus.\", \"Veniam illo pariatur.\"]"], ["price", "64.13"], ["image_url", "../app/assets/images/5.jpg"], ["created_at", "2019-11-25 15:08:00.053159"], ["updated_at", "2019-11-25 15:08:00.053159"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Carrot"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Debitis animi quod.\", \"Est aut et.\", \"Inventore repellendus quo.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Carrot"], ["descript", "[\"Debitis animi quod.\", \"Est aut et.\", \"Inventore repellendus quo.\"]"], ["price", "12.59"], ["image_url", "../app/assets/images/6.jpg"], ["created_at", "2019-11-25 15:08:00.060979"], ["updated_at", "2019-11-25 15:08:00.060979"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Celery"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Nobis ex harum.\", \"Non est doloribus.\", \"Sed quia vel.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Celery"], ["descript", "[\"Nobis ex harum.\", \"Non est doloribus.\", \"Sed quia vel.\"]"], ["price", "88.41"], ["image_url", "../app/assets/images/7.jpg"], ["created_at", "2019-11-25 15:08:00.070493"], ["updated_at", "2019-11-25 15:08:00.070493"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Snowpea sprouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Non voluptate est.\", \"Iusto culpa labore.\", \"Omnis consequatur rem.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Snowpea sprouts"], ["descript", "[\"Non voluptate est.\", \"Iusto culpa labore.\", \"Omnis consequatur rem.\"]"], ["price", "21.04"], ["image_url", "../app/assets/images/8.jpg"], ["created_at", "2019-11-25 15:08:00.080775"], ["updated_at", "2019-11-25 15:08:00.080775"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Snowpea sprouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Cumque aut consectetur.\", \"Voluptate sit vero.\", \"Et asperiores iste.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Turnips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Voluptatem qui sed.\", \"Eum debitis est.\", \"Sed est et.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Turnips"], ["descript", "[\"Voluptatem qui sed.\", \"Eum debitis est.\", \"Sed est et.\"]"], ["price", "39.49"], ["image_url", "../app/assets/images/10.jpg"], ["created_at", "2019-11-25 15:08:00.100286"], ["updated_at", "2019-11-25 15:08:00.100286"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+=======
+Started GET "/" for ::1 at 2019-11-25 16:00:29 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "Katchup_development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
 web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
@@ -1139,10 +1331,254 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-11-25 16:01:32 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "Katchup_development" does not exist
+):
+  
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.3) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:811:in `new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:855:in `checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:834:in `try_to_checkout_new_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:795:in `acquire_connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:523:in `checkout'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1014:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.3) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.3) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (533.8ms)[0m  [1m[35mCREATE DATABASE "Katchup_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (401.1ms)[0m  [1m[35mCREATE DATABASE "Katchup_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-25 16:02:21 +0100
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
   
   
   
 ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+=======
+  [1m[35m (31.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906419862699323360)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateItems (20191125113559)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "title" character varying, "descript" text, "price" decimal, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113559_create_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113559"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateOrders (20191125113620)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113620_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113620"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCarts (20191125113630)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125113630_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125113630"]]
+  ↳ bin/rails:9
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20191125114035)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "first_name" character varying, "last_name" character varying, "is_admin" boolean, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:5
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:42
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20191125114035_devise_create_users.rb:43
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125114035"]]
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkCartUser (20191125123404)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "cart_id" bigint[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_cart_id" ON "users"  ("cart_id")[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[35m (5.8ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_1d13818f0e"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20191125123404_link_cart_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125123404"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkItemsCart (20191125123736)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "carts" ADD "item_id" bigint[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_item_id" ON "carts"  ("item_id")[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_201d6b691f"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "carts" ADD "user_id" bigint[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_user_id" ON "carts"  ("user_id")[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_ea59a35211"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20191125123736_link_items_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125123736"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to LinkOrderUser (20191125125010)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "orders" ADD "user_id" bigint[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_user_id" ON "orders"  ("user_id")[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "orders" ADD "item_id" bigint[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_item_id" ON "orders"  ("item_id")[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "orders" ADD CONSTRAINT "fk_rails_fc971cd604"
+FOREIGN KEY ("item_id")
+  REFERENCES "items" ("id")
+[0m
+  ↳ db/migrate/20191125125010_link_order_user.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191125125010"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-25 15:03:01.458246"], ["updated_at", "2019-11-25 15:03:01.458246"]]
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906419862699323360)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-25 16:03:18 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/pol-erwan/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 919ms (Views: 909.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/img_1.jpg" for ::1 at 2019-11-25 16:03:19 +0100
+Started GET "/images/img_2.jpg" for ::1 at 2019-11-25 16:03:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+  
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1171,10 +1607,13 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
   
   
 ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1202,9 +1641,23 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
   
   
+=======
+Started GET "/images/person_3.jpg" for ::1 at 2019-11-25 16:03:20 +0100
+Started GET "/images/img_3.jpg" for ::1 at 2019-11-25 16:03:20 +0100
+Started GET "/images/person_2.jpg" for ::1 at 2019-11-25 16:03:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3.jpg"):
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+  
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1259,11 +1712,14 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/person_3.jpg" for 127.0.0.1 at 2019-11-25 16:06:00 +0100
 Started GET "/images/person_5.jpg" for 127.0.0.1 at 2019-11-25 16:06:00 +0100
   
   
 ActionController::RoutingError (No route matches [GET] "/images/person_3.jpg"):
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1292,7 +1748,13 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/person_5.jpg"):
+=======
+Started GET "/images/person_4.jpg" for ::1 at 2019-11-25 16:03:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1321,7 +1783,11 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/hero_1.jpg" for 127.0.0.1 at 2019-11-25 16:06:01 +0100
+=======
+Started GET "/images/hero_1.jpg" for ::1 at 2019-11-25 16:03:21 +0100
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 ActionController::RoutingError (No route matches [GET] "/images/hero_1.jpg"):
   
@@ -1352,9 +1818,15 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/new" for 127.0.0.1 at 2019-11-25 16:06:45 +0100
   
 ActionController::RoutingError (No route matches [GET] "/new"):
+=======
+Started GET "/images/person_5.jpg" for ::1 at 2019-11-25 16:03:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_5.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1383,6 +1855,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-25 16:06:58 +0100
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
@@ -1402,6 +1875,22 @@ Started GET "/images/img_3.jpg" for 127.0.0.1 at 2019-11-25 16:10:48 +0100
   
 Started GET "/images/person_5.jpg" for 127.0.0.1 at 2019-11-25 16:10:48 +0100
 ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+=======
+>>>>>>> users
+Started GET "/" for ::1 at 2019-11-25 16:21:46 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/pol-erwan/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 490ms (Views: 480.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/img_1.jpg" for ::1 at 2019-11-25 16:21:46 +0100
+Started GET "/images/img_2.jpg" for ::1 at 2019-11-25 16:21:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1430,9 +1919,17 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/img_1.jpg" for 127.0.0.1 at 2019-11-25 16:10:48 +0100
   
 ActionController::RoutingError (No route matches [GET] "/images/person_5.jpg"):
+=======
+Started GET "/images/person_3.jpg" for ::1 at 2019-11-25 16:21:47 +0100
+Started GET "/images/person_2.jpg" for ::1 at 2019-11-25 16:21:47 +0100
+Started GET "/images/img_3.jpg" for ::1 at 2019-11-25 16:21:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1461,12 +1958,20 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/person_3.jpg" for 127.0.0.1 at 2019-11-25 16:10:48 +0100
 Started GET "/images/img_2.jpg" for 127.0.0.1 at 2019-11-25 16:10:48 +0100
   
 ActionController::RoutingError (No route matches [GET] "/images/person_3.jpg"):
   
   
+=======
+  
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1495,7 +2000,12 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+=======
+ActionController::RoutingError (No route matches [GET] "/images/person_3.jpg"):
+  
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1524,8 +2034,11 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
   
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -1553,8 +2066,14 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/hero_1.jpg" for 127.0.0.1 at 2019-11-25 16:10:49 +0100
 Started GET "/images/person_4.jpg" for 127.0.0.1 at 2019-11-25 16:10:49 +0100
+=======
+Started GET "/images/hero_1.jpg" for ::1 at 2019-11-25 16:21:51 +0100
+Started GET "/images/person_4.jpg" for ::1 at 2019-11-25 16:21:51 +0100
+Started GET "/images/person_5.jpg" for ::1 at 2019-11-25 16:21:51 +0100
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 ActionController::RoutingError (No route matches [GET] "/images/hero_1.jpg"):
   
@@ -1585,7 +2104,10 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/images/person_2.jpg" for 127.0.0.1 at 2019-11-25 16:10:49 +0100
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 ActionController::RoutingError (No route matches [GET] "/images/person_4.jpg"):
   
@@ -1617,7 +2139,11 @@ puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
   
+<<<<<<< HEAD
 ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+=======
+ActionController::RoutingError (No route matches [GET] "/images/person_5.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1646,6 +2172,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-25 16:21:59 +0100
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
@@ -1732,6 +2259,11 @@ Completed 200 OK in 298ms (Views: 278.4ms | ActiveRecord: 3.1ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/img/login-image.jpg"):
+=======
+Started GET "/contact" for ::1 at 2019-11-25 16:23:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1745,12 +2277,16 @@ activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagge
 activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
 activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
 railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.3) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
 activesupport (5.2.3) lib/active_support/logger_silence.rb:21:in `silence'
 activesupport (5.2.3) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
 actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
 rack (2.0.7) lib/rack/method_override.rb:22:in `call'
@@ -1765,6 +2301,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-25 16:33:06 +0100
 Processing by Devise::SessionsController#new as HTML
   Rendering devise/sessions/new.html.erb within layouts/application
@@ -2216,6 +2753,94 @@ Completed 200 OK in 210ms (Views: 29.8ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:01:48 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+Started GET "/carts/show" for ::1 at 2019-11-25 16:23:15 +0100
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"show"}
+Completed 406 Not Acceptable in 376ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (CartsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/images/img_3.jpg" for ::1 at 2019-11-25 16:23:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2244,6 +2869,43 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/images/hero_1.jpg" for ::1 at 2019-11-25 16:23:19 +0100
+Started GET "/images/person_2.jpg" for ::1 at 2019-11-25 16:23:19 +0100
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+ActionController::RoutingError (No route matches [GET] "/images/hero_1.jpg"):
+  
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:02:25 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2257,6 +2919,8 @@ Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:02:26 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
   
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2284,6 +2948,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:02:53 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2296,6 +2961,21 @@ Completed 200 OK in 205ms (Views: 31.4ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:02:53 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+Started GET "/" for ::1 at 2019-11-25 16:29:24 +0100
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/pol-erwan/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 495ms (Views: 483.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/img_1.jpg" for ::1 at 2019-11-25 16:29:25 +0100
+Started GET "/images/img_2.jpg" for ::1 at 2019-11-25 16:29:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_1.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2324,6 +3004,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:05:11 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2336,6 +3017,13 @@ Completed 200 OK in 217ms (Views: 36.8ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:05:12 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+Started GET "/images/img_3.jpg" for ::1 at 2019-11-25 16:29:25 +0100
+Started GET "/images/person_3.jpg" for ::1 at 2019-11-25 16:29:25 +0100
+Started GET "/images/person_2.jpg" for ::1 at 2019-11-25 16:29:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_2.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2364,6 +3052,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:05:22 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2377,6 +3066,13 @@ Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:05:22 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
   
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/img_3.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2404,6 +3100,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:05:38 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2416,6 +3113,11 @@ Completed 200 OK in 195ms (Views: 38.1ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:05:39 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_3.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2444,6 +3146,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:06:28 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2457,6 +3160,8 @@ Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:06:29 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
   
+=======
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
@@ -2484,6 +3189,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:07:52 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2496,6 +3202,12 @@ Completed 200 OK in 208ms (Views: 48.6ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:07:52 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+Started GET "/images/hero_1.jpg" for ::1 at 2019-11-25 16:29:29 +0100
+Started GET "/images/person_5.jpg" for ::1 at 2019-11-25 16:29:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/hero_1.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2524,6 +3236,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:08:06 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2536,6 +3249,10 @@ Completed 200 OK in 189ms (Views: 31.0ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:08:06 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_5.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2564,6 +3281,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:09:17 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2576,6 +3294,11 @@ Completed 200 OK in 231ms (Views: 32.2ms | ActiveRecord: 0.0ms)
 Started GET "/users/..." for 127.0.0.1 at 2019-11-25 17:09:18 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/..."):
+=======
+Started GET "/images/person_4.jpg" for ::1 at 2019-11-25 16:29:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/person_4.jpg"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2604,6 +3327,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:09:53 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -2683,6 +3407,24 @@ Completed 200 OK in 200ms (Views: 31.6ms | ActiveRecord: 0.0ms)
 Started GET "/users/images/hero_1.jpg" for 127.0.0.1 at 2019-11-25 17:16:01 +0100
   
 ActionController::RoutingError (No route matches [GET] "/users/images/hero_1.jpg"):
+=======
+Started GET "/users/edit" for ::1 at 2019-11-25 16:29:41 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-25 16:29:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 184ms (Views: 140.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users" for ::1 at 2019-11-25 16:30:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
   
 actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -2711,6 +3453,7 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/sign_in?utf8=%E2%9C%93&authenticity_token=j8senYi2JeKSKx3LHo%2F3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP%2BgA%3D%3D&user%5Bemail%5D=eva.papazian%40ieseg.fr&user%5Bpassword%5D=[FILTERED]" for 127.0.0.1 at 2019-11-25 17:18:57 +0100
 Processing by Devise::SessionsController#new as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"j8senYi2JeKSKx3LHo/3hsSutNszf31HJA2Y3uTbqJfzYNTp81Jsa74sLDpWnLVEglNHDn3KMNUk46x2zcP+gA==", "user"=>{"email"=>"eva.papazian@ieseg.fr", "password"=>"[FILTERED]"}}
@@ -4083,5 +4826,14 @@ To customize the errors styles please run `rails g devise:views` and modify the
   Rendered devise/shared/_links.html.erb (0.8ms)
   Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
 Completed 200 OK in 178ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/users/sign_up" for ::1 at 2019-11-25 16:30:39 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+>>>>>>> a24f3e5a4532a116b70189a56a44a832caf1f0cf
 
 
