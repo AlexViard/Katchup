@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'index#items'
+  root 'items#index'
   devise_for :users
   resources :carts
   resources :items
