@@ -14,3 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery.min
+//= require popper.min
+//= require bootstrap.min
+//= require bootstrap-switch
+//= require nouislider.min
+//= require moment.min
+//= require bootstrap-datepicker
+//= require paper-kit
