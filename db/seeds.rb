@@ -22,6 +22,6 @@ end
 
 10.times do |index|
 
-  Item.create(title: Faker::Food.vegetables, descript: Faker::Lorem.sentences, price: Faker::Number.decimal(l_digits: 2), image_url: picture_tab_2[index])
+  Item.create(title: Faker::Food.vegetables, descript: Faker::Lorem.sentence(word_count: 10), price: Faker::Number.decimal(l_digits: 2), image_url: picture_tab_2[index])
 
 end
