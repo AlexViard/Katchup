@@ -38381,3 +38381,42 @@ Processing by CartsController#show as HTML
 Completed 200 OK in 1130ms (Views: 936.8ms | ActiveRecord: 31.8ms)
 
 
+Started GET "/carts/3" for 127.0.0.1 at 2019-11-25 20:55:45 +0100
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ludo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering carts/show.html.erb within layouts/application
+  [1m[36mCart Load (3.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/carts/show.html.erb:14
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:15
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:16
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/carts/show.html.erb:17
+  Rendered carts/show.html.erb within layouts/application (114.4ms)
+Completed 200 OK in 1351ms (Views: 1210.0ms | ActiveRecord: 34.3ms)
+
+
+Started POST "/users/3/charges" for 127.0.0.1 at 2019-11-25 20:56:18 +0100
+  
+SyntaxError (/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected ':', expecting ')'
+	  		Order.create(user_id	: params[:user_id], item_id: t...
+	  		                    	^
+/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+...id	: params[:user_id], item_id: t.item_id)
+...  	                    ^~~~~~~~
+/home/ludo/Bureau/Thp/Katchup/app/controllers/charges_controller.rb:27: syntax error, unexpected ')', expecting keyword_end
+...[:user_id], item_id: t.item_id)
+...                              ^):
+  
+app/controllers/charges_controller.rb:27: syntax error, unexpected ':', expecting ')'
+app/controllers/charges_controller.rb:27: syntax error, unexpected tLABEL, expecting '='
+app/controllers/charges_controller.rb:27: syntax error, unexpected ')', expecting keyword_end

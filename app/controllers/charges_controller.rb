@@ -24,7 +24,7 @@ class ChargesController < ApplicationController
 	  })
 	  if charge
 	  	@carts.each do |t|
-	  		Order.create(user_id	: params[:user_id], item_id: t.item_id)
+	  		Order.create(user_id: params[:user_id], item_id: t.item_id)
 	  	end
 	  	flash[:sucess] = "Inscription à l'événement payer"
 	  	redirect_to root_path
