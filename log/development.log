@@ -1095,3 +1095,166 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (1.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.8ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 25]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 26]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 27]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 28]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 29]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 30]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Endive"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sint rem distinctio.\", \"Voluptates ducimus deserunt.\", \"Numquam id sed.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (1.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Endive"], ["descript", "[\"Sint rem distinctio.\", \"Voluptates ducimus deserunt.\", \"Numquam id sed.\"]"], ["price", "69.89"], ["image_url", "../app/assets/images/1.jpg"], ["created_at", "2019-11-25 15:07:59.974900"], ["updated_at", "2019-11-25 15:07:59.974900"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Cabbage"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sunt eius pariatur.\", \"Rerum in sed.\", \"Ea magni quas.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cabbage"], ["descript", "[\"Sunt eius pariatur.\", \"Rerum in sed.\", \"Ea magni quas.\"]"], ["price", "35.18"], ["image_url", "../app/assets/images/2.jpg"], ["created_at", "2019-11-25 15:08:00.025901"], ["updated_at", "2019-11-25 15:08:00.025901"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Radish"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Error placeat inventore.\", \"Iusto aut iste.\", \"Odio quos dolorem.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Radish"], ["descript", "[\"Error placeat inventore.\", \"Iusto aut iste.\", \"Odio quos dolorem.\"]"], ["price", "33.74"], ["image_url", "../app/assets/images/3.jpg"], ["created_at", "2019-11-25 15:08:00.037108"], ["updated_at", "2019-11-25 15:08:00.037108"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Okra"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Dolorum iusto unde.\", \"In consequuntur et.\", \"Expedita quaerat dolores.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Capers"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Sint facere non.\", \"Maiores adipisci temporibus.\", \"Veniam illo pariatur.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Capers"], ["descript", "[\"Sint facere non.\", \"Maiores adipisci temporibus.\", \"Veniam illo pariatur.\"]"], ["price", "64.13"], ["image_url", "../app/assets/images/5.jpg"], ["created_at", "2019-11-25 15:08:00.053159"], ["updated_at", "2019-11-25 15:08:00.053159"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Carrot"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Debitis animi quod.\", \"Est aut et.\", \"Inventore repellendus quo.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Carrot"], ["descript", "[\"Debitis animi quod.\", \"Est aut et.\", \"Inventore repellendus quo.\"]"], ["price", "12.59"], ["image_url", "../app/assets/images/6.jpg"], ["created_at", "2019-11-25 15:08:00.060979"], ["updated_at", "2019-11-25 15:08:00.060979"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Celery"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Nobis ex harum.\", \"Non est doloribus.\", \"Sed quia vel.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Celery"], ["descript", "[\"Nobis ex harum.\", \"Non est doloribus.\", \"Sed quia vel.\"]"], ["price", "88.41"], ["image_url", "../app/assets/images/7.jpg"], ["created_at", "2019-11-25 15:08:00.070493"], ["updated_at", "2019-11-25 15:08:00.070493"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Snowpea sprouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Non voluptate est.\", \"Iusto culpa labore.\", \"Omnis consequatur rem.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Snowpea sprouts"], ["descript", "[\"Non voluptate est.\", \"Iusto culpa labore.\", \"Omnis consequatur rem.\"]"], ["price", "21.04"], ["image_url", "../app/assets/images/8.jpg"], ["created_at", "2019-11-25 15:08:00.080775"], ["updated_at", "2019-11-25 15:08:00.080775"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Snowpea sprouts"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Cumque aut consectetur.\", \"Voluptate sit vero.\", \"Et asperiores iste.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."title" = $1 LIMIT $2[0m  [["title", "Turnips"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."descript" = $1 LIMIT $2[0m  [["descript", "[\"Voluptatem qui sed.\", \"Eum debitis est.\", \"Sed est et.\"]"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("title", "descript", "price", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Turnips"], ["descript", "[\"Voluptatem qui sed.\", \"Eum debitis est.\", \"Sed est et.\"]"], ["price", "39.49"], ["image_url", "../app/assets/images/10.jpg"], ["created_at", "2019-11-25 15:08:00.100286"], ["updated_at", "2019-11-25 15:08:00.100286"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
