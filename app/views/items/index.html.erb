@@ -31,51 +31,21 @@
 <!-- Cards -->
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
+  <% @items.each_with_index do |t, index| %>
+<%  if index < 5 %>
   <div class="card" style="">
-  <img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
+  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title"><%= t.title %></h4>
+    <p class="card-text"></p>
+    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
   </div>
 </div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
+<% end %>
+<% end %>
 </div>
 
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
 
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-</div>
 
 <!-- Cards Deck End  -->
 <br><br>
@@ -97,50 +67,18 @@
 <!-- Cards -->
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
+  <% @items.each_with_index do |t, index| %>
+<%  if index > 5 and index < 10%>
   <div class="card" style="">
-  <img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
+  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title"><%= t.title %></h4>
+    <p class="card-text"></p>
+    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
   </div>
 </div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
+<% end %>
+<% end %>
 </div>
 
 <!-- Cards Deck End  -->
@@ -163,50 +101,18 @@
 <!-- Cards -->
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
+  <% @items.each_with_index do |t, index| %>
+<%  if index > 10 and index < 15%>
   <div class="card" style="">
-  <img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
+  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
   <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title"><%= t.title %></h4>
+    <p class="card-text"></p>
+    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
   </div>
 </div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-
-<div class="card" style="">
-<img class="card-img-top" src="https://zupimages.net/up/19/48/tkos.jpg" alt="Card image cap">
-<div class="card-body">
-  <h4 class="card-title">Card title</h4>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
+<% end %>
+<% end %>
 </div>
 
 <!-- Cards Deck End -->
@@ -226,41 +132,41 @@
       <div class="row justify-content-center">
         <div class="col-8">
           <div class="border p-3 rounded mb-2">
-            <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1" class="accordion-item h5 d-block mb-0">How to list my item?</a>
+            <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1" class="accordion-item h5 d-block mb-0">Comment avons-nous toutes ces photos de chats ?</a>
 
             <div class="collapse" id="collapse-1">
               <div class="pt-2">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                <p class="mb-0">Nous avons un très grand jardins qui nous permettent d'accueillir des millions voire des milliards de chats, Nous avons arrêté de compter car il y en a beaucoup trop, mais ils sont très mignons en tout cas.</p>
               </div>
             </div>
           </div>
 
           <div class="border p-3 rounded mb-2">
-            <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4" class="accordion-item h5 d-block mb-0">Is this available in my country?</a>
+            <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4" class="accordion-item h5 d-block mb-0">Y a-t-il des chats comme ça dans ma ville ?</a>
 
             <div class="collapse" id="collapse-4">
               <div class="pt-2">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                <p class="mb-0">Certain de nos chats sont très spéciales car nous les fabriquons a la main, ce sont des races inexistantes sauf chez nous, ce qui rend nos photos resplendissantes !</p>
               </div>
             </div>
           </div>
 
           <div class="border p-3 rounded mb-2">
-            <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2" class="accordion-item h5 d-block mb-0">Is it free?</a>
+            <a data-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapse-2" class="accordion-item h5 d-block mb-0">Vos photos sont gratuites ?</a>
 
             <div class="collapse" id="collapse-2">
               <div class="pt-2">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                <p class="mb-0">Nos photos ne sont pas gratuites, elles sont à des prix abordables pour tous...</p>
               </div>
             </div>
           </div>
 
           <div class="border p-3 rounded mb-2">
-            <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3" class="accordion-item h5 d-block mb-0">How the system works?</a>
+            <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3" class="accordion-item h5 d-block mb-0">Vendez-vous vos chats ?</a>
 
             <div class="collapse" id="collapse-3">
               <div class="pt-2">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                <p class="mb-0">Possédant un grand jardin nous préférons garder nos millions de chats</p>
               </div>
             </div>
           </div>
@@ -285,7 +191,7 @@
   </div>
   <br><br>
 
-  
+
 
 
 </body>
