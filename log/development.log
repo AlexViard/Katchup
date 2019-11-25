@@ -33207,3 +33207,40 @@ Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.0ms)
 
 >>>>>>> master
 >>>>>>> views
+Started GET "/users/password/new" for ::1 at 2019-11-25 19:13:53 +0100
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/leabramoulle/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (221.0ms)
+Completed 200 OK in 1089ms (Views: 1058.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-25 19:14:07 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___3090665277409691020_70206076235040 at /Users/leabramoulle/Desktop/THP/S10_Projet_Cat/Katchup/app/views/devise/registrations/new.html.erb:21)
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 183ms (Views: 181.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-25 19:14:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_sessions_new_html_erb___1690042690253237388_70206126920980 at /Users/leabramoulle/Desktop/THP/S10_Projet_Cat/Katchup/app/views/devise/sessions/new.html.erb:30)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 129ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
