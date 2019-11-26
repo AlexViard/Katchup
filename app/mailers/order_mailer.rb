@@ -1,7 +1,7 @@
 class OrderMailer < ApplicationMailer
 
 	def customer_email(order)
-		@order = order
+		  @order = order
     	@url  = 'http://katchup-app.heroku.app.com' 
     	mail(to: @user.email, subject: 'Votre commande est enregistrée!') 
   	end

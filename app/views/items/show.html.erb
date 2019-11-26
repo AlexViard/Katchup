@@ -30,8 +30,9 @@
 							<h2 class="card-title" style="padding-top:20px;"><%=@item.title%></h2><hr>
 							<p class="card-text"><strong>Description :</strong> <%=@item.descript%></p>
 							<p class="card-text"><small>Prix : <%=@item.price%>€</small></p>
-
-							<%= link_to "Ajouter au panier", carts_path(item_id: params[:id]),  method: :post, class:"btn btn-outline-primary" %>
+							<% if user_signed_in? %>
+								<%= link_to "Ajouter au panier", user_carts_path(user_id:current_user.id, item_id:@item.id),  method: :post, class:"btn btn-outline-primary" %>
+							<%end%>
 							<%= link_to "Retour à la liste des articles", root_path,  class:"btn btn-outline-danger", style:"opacity:70%;" %>
 							<br><br>
 							<p> <span class="badge badge-primary"> <%=@cart.where(item_id:@item.id).count%> </span> Ils nous ont fait confiance ♡ </p>
