@@ -17,7 +17,8 @@
   </head>
 
   <body>
-
+    <%@cart = Cart.all%>
+    <%@nombreItem = Cart.where(user_id:current_user.id)%>
 
     <!-- NavBar -->
 
@@ -39,6 +40,13 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Nous contacter</a>
           </li>
+          
+          <% if user_signed_in? %>
+            <li class="nav-item">
+                 <a class="nav-link" href="<%=user_cart_path(current_user,1)%>">Panier <%=@nombreItem.count%></a>
+            </li>
+          <%end%>
+          
           <li class="nav-item dropdown navbar-toggler-right">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Mes options
@@ -58,7 +66,7 @@
     </div>
   </nav>
   <!-- End NavBar -->
->>>>>>> views
+
 
 
     <%= yield %>

@@ -6,7 +6,7 @@ class CartsController < ApplicationController
 
   def show
     # Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
-    @cart = Cart.where(user_id: params[:id])
+    @cart = Cart.where(user_id: params[:user_id])
     @item = Item.all
     @order = Order.new
   end
@@ -19,6 +19,8 @@ class CartsController < ApplicationController
     # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
     # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
     # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
+    Cart.create(user_id: params[:user_id])
+    redirect_to root_path
   end
 
   def edit

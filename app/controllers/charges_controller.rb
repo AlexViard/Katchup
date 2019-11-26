@@ -3,12 +3,11 @@ class ChargesController < ApplicationController
   end
 
   def create
-  	  @carts = Cart.where(user: params[:user_id])
+  	  @carts = Cart.where(user_id: params[:user_id])
   	  @amount = 0
   	  @carts.each do |t|
-  	  	@amount += Item.find(t.item_id).price
+  	  	@amount = Item.find(t.item_id).price
   	  end
-  	  print(@amount)
   	  
 
 	  customer = Stripe::Customer.create({
