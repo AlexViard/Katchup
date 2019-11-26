@@ -26,14 +26,17 @@ end
 
 <<<<<<< HEAD
 
+
 16.times do |index|
 
 item_new =  Item.create(title: Faker::Food.vegetables, descript: Faker::Lorem.sentence(word_count: 10), price: Faker::Number.decimal(l_digits: 2), image_url: picture_tab_2[index])
 item  << item_new
+
 =======
+
 10.times do |index|
   item << Item.create(title: Faker::Food.vegetables, descript: Faker::Lorem.sentence(word_count: 10), price: Faker::Number.decimal(l_digits: 2), image_url: picture_tab_2[index])
->>>>>>> 9734e1b97ea113ef9d8d3e865c8b020965de71cc
+>>>>>>> af04e291064742c1db4841ac8632ecee9a1da73b
 end
 
 10.times do |index|
@@ -42,9 +45,11 @@ end
 
 5.times do |index|
 <<<<<<< HEAD
+
 	Cart.create(user_id: user.sample.id, item_id: item.sample.id)
 end
+
 =======
-	Cart.create(user_id: u.sample.id, item_id: item.sample.id)
+	Cart.create(user_id: user.sample.id, item_id: item.sample.id)
 end
->>>>>>> 9734e1b97ea113ef9d8d3e865c8b020965de71cc
+>>>>>>> af04e291064742c1db4841ac8632ecee9a1da73b
