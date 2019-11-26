@@ -3,22 +3,21 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
+  	resources :charges, only: [:create]
+  	resources :carts, only: [:show,:destroy,:create]	
   	resources :avatar, only: [:create]
   end
-  resources :carts
   resources :items
   resources :orders
-<<<<<<< HEAD
 
 
   namespace :admin do
-  root 'admins#index'
-  resources :admins
-  resources :users
-  resources :items
-  resources :orders
-end
-=======
+    root 'admins#index'
+    resources :admins
+    resources :users
+    resources :items
+    resources :orders
+  end
   resources :teams, only:[:index]
->>>>>>> 71c1382ad721f0bbf4ad199f66479ced8e634500
+  resources :contacts, only:[:index]
 end
