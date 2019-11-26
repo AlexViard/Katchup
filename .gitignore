@@ -1,13 +1,7 @@
 .env
-
-<<<<<<< HEAD
 tmp/*
-<<<<<<< HEAD
-=======
-tmp/*
->>>>>>> 637751fdb16a2a9aab2e45b104cbfddce7cbb0c0
-=======
+tmp/cache/*
 
-	log/development.log
-	tmp/cache/bootsnap-load-path-cache
->>>>>>> storage
+tmp/*
+log/development.log
+tmp/cache/bootsnap-load-path-cache

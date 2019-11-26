@@ -14,10 +14,15 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <!-- Fonts and icons End -->
 
+    <%= favicon_link_tag asset_path('cat.ico') %>
+
   </head>
 
   <body>
-
+    <%@cart = Cart.all%>
+    <% if user_signed_in? %>
+      <%@nombreItem = Cart.where(user_id:current_user.id)%>
+    <%end%>
 
     <!-- NavBar -->
 
@@ -39,6 +44,13 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Nous contacter</a>
           </li>
+          
+          <% if user_signed_in? %>
+            <li class="nav-item">
+                 <a class="nav-link" href="<%=user_cart_path(current_user,1)%>">Panier <%=@nombreItem.count%></a>
+            </li>
+          <%end%>
+          
           <li class="nav-item dropdown navbar-toggler-right">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Mes options
@@ -58,7 +70,10 @@
     </div>
   </nav>
   <!-- End NavBar -->
->>>>>>> views
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9734e1b97ea113ef9d8d3e865c8b020965de71cc
 
 
     <%= yield %>
