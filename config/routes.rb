@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-  	resources :charges, only: [:create]
+  	resources :avatar, only: [:create]
   end
   resources :carts
   resources :items
   resources :orders
+<<<<<<< HEAD
 
 
   namespace :admin do
@@ -17,4 +18,7 @@ Rails.application.routes.draw do
   resources :items
   resources :orders
 end
+=======
+  resources :teams, only:[:index]
+>>>>>>> 71c1382ad721f0bbf4ad199f66479ced8e634500
 end
