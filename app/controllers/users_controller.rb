@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 	def show
 	# Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
 		@user = User.find(params[:id])
-
 	end
 
 	def new

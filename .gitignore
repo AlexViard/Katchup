@@ -2,6 +2,12 @@
 
 <<<<<<< HEAD
 tmp/*
+<<<<<<< HEAD
 =======
 tmp/*
 >>>>>>> 637751fdb16a2a9aab2e45b104cbfddce7cbb0c0
+=======
+
+	log/development.log
+	tmp/cache/bootsnap-load-path-cache
+>>>>>>> storage
