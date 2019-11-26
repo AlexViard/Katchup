@@ -8,80 +8,89 @@ body {
   height:30em;
 }
 
-</style >
+</style>
 
 <body>
-  <!-- Extra details for Live View on GitHub Pages -->
-  <!-- Google Tag Manager (noscript) -->
-  <!-- End Google Tag Manager (noscript) -->
-   <div><h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
-   </div>
 
      <div class="container card card-body" style="padding-bottom:40px; border-radius:20px; background-color:white; opacity:92%; margin-top:80px; margin-bottom:80px;">
   <a class="text-center">
-    <h1>Page Profil show</h1>
+    <h1>Page Profil <%= current_user.first_name %><%=@user.id%></h1>
   </a>
 
-       <div class="section profile-content">
-         <div class="container">
-           <div class="owner">
-             <div class="avatar">
-             <img src="https://images-na.ssl-images-amazon.com/images/I/41nUSkF6zgL._SX425_.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-             </div>
-             <div class="name">
-             <h4 class="title"><%=current_user.email%>
-             </h4>
-             <h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
-           <btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"><a href="<%= edit_user_registration_path %>"></i> Setting</btn>
-           </div>
-         </div>
-         <br/>
-       <div class="nav-tabs-navigation">
-         <div class="nav-tabs-wrapper">
-         <ul class="nav nav-tabs" role="tablist">
-           <li class="nav-item">
-             <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">My kat picture</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" data-toggle="tab" href="#following" role="tab">Other kat picture</a>
-           </li>
-         </ul>
-       </div>
-     </div>
+  <div class="section profile-content">
+    <div class="container">
+      <div class="owner">
+        <div class="name">
+          <h4 class="title"><%=current_user.email%>
+            <br />
+          </h4>
+	  <br />
+	  <br />
+	<%if @user.avatar.attached?%>
+          <%= image_tag @user.avatar, alt: 'avatar' %>
+        <%else%>
+          <div class="avatar">
+            <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ml-auto mr-auto text-center">
+          <%= form_tag user_avatar_index_path(@user), multipart: true do %>
+          <%= file_field_tag :avatar %>
+	  <%= submit_tag "mettre à jour" %>
+          <% end %>
+
+        <%end%>
+        </div>
+      </div>
+      <br/>
+      <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">My Kat Picture</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#following" role="tab">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- Tab panes -->
-     <div class="tab-content following">
-       <div class="tab-pane active" id="follows" role="tabpanel">
-         <div class="row">
-           <div class="col-md-6 ml-auto mr-auto">
-             <ul class="list-unstyled follows">
-               <li>
-                 <div class="row">
-                   <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
-                      <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/12875-src.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                   </div>
-                   <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
-                     <h6>Flume
-                       <br/>
-                       <small>Musical Producer</small>
-                     </h6>
-                   </div>
-                   <div class="col-lg-3 col-md-4 col-4  ml-auto mr-auto">
-                     <div class="form-check">
-                       <label class="form-check-label">
-                         <input class="form-check-input" type="checkbox" value="" checked>
-                         <span class="form-check-sign"></span>
-                       </label>
-                     </div>
-                   </div>
-                 </div>
-               </li>
-               <hr />
-               <li>
-                 <div class="row">
-                    <div class="col-lg-2 col-md-4 col-4 mx-auto ">
-                      <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+      <div class="tab-content following">
+        <div class="tab-pane active" id="follows" role="tabpanel">
+          <div class="row">
+            <div class="col-md-6 ml-auto mr-auto">
+              <ul class="list-unstyled follows">
+                <li>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
+                      <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                     </div>
-                   <div class="col-lg-7 col-md-4 col-4">
+                    <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
+                      <h6>Flume
+                        <br/>
+                        <small>Musical Producer</small>
+                      </h6>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-4  ml-auto mr-auto">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="" checked>
+                          <span class="form-check-sign"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-4 mx-auto ">
+                      <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                    </div>
+                    <div class="col-lg-7 col-md-4 col-4">
                       <h6>Banks
                         <br />
                         <small>Singer</small>
@@ -102,8 +111,13 @@ body {
           </div>
         </div>
         <div class="tab-pane text-center" id="following" role="tabpanel">
-          <h3 class="text-muted">Not following anyone yet :(</h3>
-          <button class="btn btn-warning btn-round">Find artists</button>
+	  <h6> change profil picture </h6><br>
+          <%= form_tag user_avatar_index_path(@user), multipart: true do %>
+          <%= file_field_tag :avatar %>
+	  <%= submit_tag "mettre à jour" %>
+          <% end %>
+	  <br>
+          <button class="btn btn-warning btn-round"><a href="<%= edit_user_registration_path %>">Edit profil</button>
         </div>
       </div>
     </div>
@@ -111,3 +125,6 @@ body {
 </div>
 
 </body>
+
+</html>
+
