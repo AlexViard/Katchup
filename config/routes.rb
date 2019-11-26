@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :carts
   resources :items
   resources :orders
+  resources :teams, only:[:index]
 end
