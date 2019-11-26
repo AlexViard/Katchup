@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users do
   	resources :charges, only: [:create]
-  	resources :carts, only: [:show]	
+  	resources :carts, only: [:show,:destroy,:create]	
   	resources :avatar, only: [:create]
   end
   resources :items
