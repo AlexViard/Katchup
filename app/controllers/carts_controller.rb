@@ -19,7 +19,9 @@ class CartsController < ApplicationController
     # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
     # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
     # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
-    Cart.create(user_id: params[:user_id])
+
+    @cart = Cart.create(user_id: current_user.id, item_id: params[:item_id])
+    #Creates a new cart that keeps the same id (user_id) which means that there will be only one cart
     redirect_to root_path
   end
 

@@ -17,6 +17,8 @@ picture_tab_2 = []
 i =  0
 u = []
 item = []
+
+
 while i < picture_tab.length
   picture_tab_2 << picture_tab[i]
   i = i + 1
@@ -30,6 +32,6 @@ end
 	u << User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,email: Faker::Name.first_name + "@yopmail.com", password:"ludovic")
 end
 
-10.times do |index|
-	Cart.create(user:u.sample, item_id: item.sample.id)
+5.times do |index|
+	Cart.create(user_id: u.sample.id, item_id: item.sample.id)
 end

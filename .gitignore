@@ -1,3 +1,7 @@
 .env
 tmp/*
 tmp/cache/*
+
+tmp/*
+log/development.log
+tmp/cache/bootsnap-load-path-cache

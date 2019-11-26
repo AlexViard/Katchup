@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Salut!</h1>
+    <p>
+     Une commande a été passée sur ton site avec l'email suivant : <%= @order.user.email %>.  <!-- likely to be modified -->
+    </p>
+
+    <p> Voici les photos commandées:
+
+      <img src= '<%= @order.item.image_url %>'> <!-- TO modify -->
+  
+    
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Salut <%= @user.first_name %>  !</h1>
+    <p>
+      Tu as passé une commande sur Katchup.fr en utilisant l'e-mail suivant : <%= @user.email %>.
+    </p>
+
+    <p> Voici tes photos (entre nous tu es teubé parce qu'elles étaient gratuites sur pixabay)
+
+      
+
+      <img src= '<%= @order.item.image_url %>'> <!-- To be modified -->
+    <p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>. Bienvenue dans l'univers des chatons!
+    </p>
+    <p> À très vite sur Katchup.fr!
+  </body>
+</html>

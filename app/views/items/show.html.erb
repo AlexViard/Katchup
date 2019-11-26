@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-	</head>
+
+
+
 	<body>
-			<div class="row justify-content-center">
+
+			<div class="jumbotron jumbotron-fluid" style="background-image:url('<%=@item.image_url%>'); background-repeat:no-repeat; background-size:cover; background-position:center; background-attachment:fixed; height:300px;">
+
+			 	<div class="container">
+			    <h1 class="display-4" style="color:white; font-weight:bold; font-size:68px;"><%= @item.title %></h1>
+			    <p class="lead" style="color:white; font-weight:bold; font-size:28px;">C'est le plus Miaw-gnon de tous les kat !</p>
+			  </div>
+
+			</div>
+
+
+			<div class="row justify-content-center" style="margin-top:40px;  padding-bottom:120px;">
 				<div class="card">
-					<div>
-					</div>
-					<div class="card-body">
-						<h5 class="card-title"><%=@item.title%></h5>
-						<p class="card-text">Description : <%=@item.descript%></p>
-						<p class="card-text">Prix : <%=@item.price%>€</p>
+
+					<div class="card-body  container row">
+
+						<div class="col-4">
+
+							<img src="<%= @item.image_url %>" class="card card-body" style="border-radius:10px;">
+						</div>
+
+						<div class="col">
+
+							<h2 class="card-title" style="padding-top:20px;"><%=@item.title%></h2><hr>
+							<p class="card-text"><strong>Description :</strong> <%=@item.descript%></p>
+							<p class="card-text"><small>Prix : <%=@item.price%>€</small></p>
+
+							<%= link_to "Ajouter au panier", carts_path(item_id: params[:id]),  method: :post, class:"btn btn-outline-primary" %>
+							<%= link_to "Retour à la liste des articles", root_path,  class:"btn btn-outline-danger", style:"opacity:70%;" %>
+							<br><br>
+							<p> <span class="badge badge-primary"> <%=@cart.where(item_id:@item.id).count%> </span> Ils nous ont fait confiance ♡ </p>
+
+						</div>
+
+
 					</div>
 				</div>
 			</div>
+
+
+
+
+
 	</body>
 </html>
