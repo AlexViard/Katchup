@@ -1,0 +1,30 @@
+<%= form_tag user_charges_path(params[:id]) do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    	<div class="row justify-content-center">
+  		<div class="col-sm-6 pt-2">
+  			<div class="card">
+  				<div class="card-body">
+  					<h5 class="card-title">Panier </h5>
+            <%prix_total = 0%>
+            <%@cart.each do |t|%>
+              <p class="card-text">Title : <%=@item.find(t.item_id).title%></p>
+              <p class="card-text">Prix : <%=@item.find(t.item_id).price%>€</p>
+              <%prix_total += @item.find(t.item_id).price%>
+            <%end%>
+            <p class="card-text">Prix total : <%=prix_total%>€</p>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-description="Inscription à l'événement"
+                    data-amount="<%=prix_total * 100%>"
+                    data-locale="auto"></script>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </article>
+<%end%>
