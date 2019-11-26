@@ -3,12 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
+  	resources :charges, only: [:create]
+  	resources :carts, only: [:show,:destroy,:create]
   	resources :avatar, only: [:create]
   end
-  resources :carts
   resources :items
   resources :orders
-  
+<<<<<<< HEAD
+
   namespace :admin do
   root 'admins#index'
   resources :admins
@@ -18,5 +20,18 @@ Rails.application.routes.draw do
 end
 
   resources :teams, only:[:index]
+  resources :contacts, only:[:index]
+=======
 
+
+  namespace :admin do
+    root 'admins#index'
+    resources :admins
+    resources :users
+    resources :items
+    resources :orders
+  end
+  resources :teams, only:[:index]
+  resources :contacts, only:[:index]
+>>>>>>> master
 end

@@ -1,7 +1,7 @@
 <div style="margin-top:160px; margin-bottom: 120px;">
 
 
-<%= form_tag user_charges_path(params[:id]) do %>
+<%= form_tag user_charges_path(params[:user_id]) do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
@@ -12,24 +12,58 @@
   		<div class="col-sm-6 pt-2">
   			<div class="card">
   				<div class="card-body">
-  					<h5 class="card-title">Panier </h5>
+
+  					<h2 class="card-title" ><i class="fas fa-shopping-basket fa-2x" style="color:#6DD3D6; margin-left:14px;"></i> Mon Panier </h2>
             <%prix_total = 0%>
             <%@cart.each do |t|%>
-              <p class="card-text">Title : <%=@item.find(t.item_id).title%></p>
-              <p class="card-text">Prix : <%=@item.find(t.item_id).price%>€</p>
-              <%prix_total += @item.find(t.item_id).price%>
-            <%end%>
-            <p class="card-text">Prix total : <%=prix_total%>€</p>
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                    data-description="Inscription à l'événement"
-                    data-amount="<%=prix_total * 100%>"
-                    data-locale="auto"></script>
+             <hr>
+
+             <div class="row">
+
+               <div class="col-4">
+
+                 <img src="<%= @item.find(t.item_id).image_url %>" class="card card-body" style="border-radius:10px;">
+
+                </div>
+
+                <div class="col-8">
+                  <br>
+                  <p class="card-text"><strong>Titre : </strong> <%=@item.find(t.item_id).title%></p>
+                  <p class="card-text"><strong>Prix : </strong><%=@item.find(t.item_id).price%>€</p>
+                  <%= link_to "Supprimer", user_cart_path(user_id:current_user.id, item_id: t.id),  method: :delete, class:"btn btn-outline-danger" %>
+                  <%prix_total += @item.find(t.item_id).price%>
+
+                  <%= link_to "Fiche Produit", item_path(t),  class:"btn btn-outline-primary", style:"opacity:70%;" %>
+
+
+                </div>
+
+              </div>
+
+                <%end%>
+                <br><br><br>
+                <div style="text-align:right;">
+                <%if prix_total != 0%>
+                    <p class="card-text">Prix total : <%=prix_total%>€</p>
+                  <%else%>
+                    <p class="card-text">Panier vide</p>
+                <%end%>
+                <%if prix_total != 0%>
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-description="Inscription à l'événement"
+                        data-amount="<%=prix_total * 100%>"
+                        data-locale="auto"></script>
+                <%end%>
+
+
+
   				</div>
   			</div>
   		</div>
   	</div>
   </article>
 <%end%>
+
 
 </div>
