@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   end
   resources :items
   resources :orders
-<<<<<<< HEAD
 
   namespace :admin do
   root 'admins#index'
@@ -21,17 +20,4 @@ end
 
   resources :teams, only:[:index]
   resources :contacts, only:[:index]
-=======
-
-
-  namespace :admin do
-    root 'admins#index'
-    resources :admins
-    resources :users
-    resources :items
-    resources :orders
-  end
-  resources :teams, only:[:index]
-  resources :contacts, only:[:index]
->>>>>>> master
 end
