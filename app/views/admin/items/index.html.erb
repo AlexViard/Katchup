@@ -1,0 +1,50 @@
+<div class="container align-items-center row mx-auto" style="margin-top: 100px; align-content:center;" >
+  <div style="vertical-align: middle;">
+  <a href="<%= admin_root_path %>" class=" pull-left btn btn-danger btn-just-icon">
+    <i class="fas fa-arrow-left fa-2x"></i>
+  </a>
+  </div>
+  <div class="card mx-auto" style="width: 20rem;">
+  <div class="card-body">
+    <p><i class="fas fa-cat fa-3x mx-3"></i>Items actuel : <%= @items.count %></p>
+  </div>
+</div>
+<div class="align-text">
+<a href="<%= admin_items_path %>" class=" pull-right btn btn-success btn-round">
+  <i class="fas fa-paw fa-2x mr-2"></i> Nouvel Item
+</a>
+</div>
+</div>
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">ID</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Description</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Image URL</th>
+      <th scope="col">Date de creation</th>
+      <th scope="col">Modifier</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<%  @items.each_with_index do |t,index| %>
+    <tr>
+      <th scope="row"><% index %></th>
+      <td><%= t.id %></td>
+      <td><%= t.title %></td>
+      <td><%= t.descript %></td>
+      <td><%= t.price %></td>
+      <td><%= t.image_url %></td>
+      <td><%= t.created_at %></td>
+      <td><%= link_to "Modifier", edit_admin_item_path(t), class:"btn btn-primary" %></td>
+      <td><%= link_to "Supprimer", admin_item_path(t.id), class:"btn btn-danger", method: :delete, confirm: "Are you sur ?" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

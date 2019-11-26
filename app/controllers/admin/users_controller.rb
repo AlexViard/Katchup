@@ -17,6 +17,4 @@ class Admin::UsersController < Admin::BasesController
         render :edit
       end
 	end
-
-
 end

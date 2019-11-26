@@ -1,10 +1,22 @@
-<div class="container" style="margin-top: 100px; width: 24em;" >
-  <div class="card">
+<div class="container align-items-center row mx-auto" style="margin-top: 100px; align-content:center;" >
+  <div style="vertical-align: middle;">
+  <a href="<%= admin_root_path %>" class=" pull-left btn btn-danger btn-just-icon">
+    <i class="fas fa-arrow-left fa-2x"></i>
+  </a>
+  </div>
+  <div class="card mx-auto" style="width: 20rem;">
   <div class="card-body">
     <p><i class="fas fa-users fa-3x mx-3"></i>Utilisateurs actuel : <%= @users.count %></p>
   </div>
 </div>
+<div class="align-text">
+<a href="<%= admin_items_path %>" class=" pull-right btn btn-success btn-round">
+   <i class="fas fa-user fa-2x mr-2"></i> Nouvel user
+</a>
 </div>
+</div>
+<br>
+
 <table class="table">
   <thead>
     <tr>
