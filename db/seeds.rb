@@ -8,8 +8,7 @@
 
 Item.destroy_all
 
-picture_tab = ["../app/assets/images/1.jpg","../app/assets/images/2.jpg","../app/assets/images/3.jpg","../app/assets/images/4.jpg","../app/assets/images/5.jpg","../app/assets/images/6.jpg","../app/assets/images/7.jpg","../app/assets/images/8.jpg","../app/assets/images/9.jpg","../app/assets/images/10.jpg"]
-
+picture_tab = ["https://cdn.pixabay.com/photo/2018/03/27/17/25/cat-3266673_960_720.jpg", "https://cdn.pixabay.com/photo/2016/05/15/03/29/cat-1393075_960_720.jpg", "https://cdn.pixabay.com/photo/2018/07/13/10/20/cat-3535404_960_720.jpg", "https://cdn.pixabay.com/photo/2013/05/30/18/21/tabby-114782_960_720.jpg", "https://cdn.pixabay.com/photo/2017/03/14/14/49/cat-2143332_960_720.jpg", "https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg", "https://cdn.pixabay.com/photo/2014/11/30/14/11/kitty-551554_960_720.jpg", "https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_960_720.jpg", "https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_960_720.png", "https://cdn.pixabay.com/photo/2015/06/08/15/02/pug-801826_960_720.jpg"]
 picture_tab_2 = []
 
 i =  0

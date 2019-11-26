@@ -1,6 +1,6 @@
 <style>
 
-body {
+.img-head {
   background-image : url('https://cdn.pixabay.com/photo/2015/03/16/23/21/cat-676972_960_720.jpg');
   image-repeat:no-repeat;
   background-size:cover;
@@ -11,20 +11,17 @@ body {
 </style >
 
 
-<body>
-    </div>
 <body class="profile-page sidebar-collapse">
   <!-- Extra details for Live View on GitHub Pages -->
   <!-- Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
   <!-- Navbar -->
   <!-- End Navbar -->
-  <a class="text-center">
-    <h1>Page Profil show</h1>
-  </a>
-    <div><h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
-
-    <div class="filter"></div>
+  <div class="text-center img-head">
+    <h1 style="padding-top:140px;">Page Profil show</h1>
+  </div>
+  <div>
+      <h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
   </div>
   <div class="section profile-content">
     <div class="container">
