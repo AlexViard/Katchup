@@ -40,6 +40,6 @@ class CartsController < ApplicationController
     # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
     @cart = Cart.find(params[:item_id])
     @cart.destroy
-    redirect_to root_path
+    redirect_to user_cart_path(current_user.id, 1)
   end
 end

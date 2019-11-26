@@ -41,16 +41,16 @@
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
   <% @items.each_with_index do |t, index| %>
-<%  if index < 5 %>
-  <div class="card" style="">
-  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title"><%= t.title %></h4>
-    <p class="card-text"></p>
-    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
-  </div>
-</div>
-<% end %>
+    <%  if index < 5 %>
+      <div class="card" style="">
+      <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title"><%= t.title %></h4>
+        <p class="card-text"></p>
+        <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
+      </div>
+    </div>
+  <% end %>
 <% end %>
 </div>
 
@@ -77,17 +77,17 @@
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
   <% @items.each_with_index do |t, index| %>
-<%  if index > 5 and index < 10%>
-  <div class="card" style="">
-  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title"><%= t.title %></h4>
-    <p class="card-text"></p>
-    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
-  </div>
-</div>
-<% end %>
-<% end %>
+    <%  if index > 5 and index < 10%>
+      <div class="card" style="">
+      <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title"><%= t.title %></h4>
+        <p class="card-text"></p>
+        <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
 </div>
 
 <!-- Cards Deck End  -->
