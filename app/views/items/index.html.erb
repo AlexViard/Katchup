@@ -111,13 +111,13 @@
 
 <div class="card-deck text-center mx-auto" style="width: 80%;">
   <% @items.each_with_index do |t, index| %>
-<%  if index > 10 and index < 15%>
+  <% if index > 10 and index < 15%>
   <div class="card" style="">
-  <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title"><%= t.title %></h4>
-    <p class="card-text"></p>
-    <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
+    <img class="card-img-top" src="<%= t.image_url %>" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title"><%= t.title %></h4>
+      <p class="card-text"></p>
+      <a href="<%= item_path(t) %>" class="btn btn-primary">Voir plus </a>
   </div>
 </div>
 <% end %>
@@ -125,6 +125,16 @@
 </div>
 
 <!-- Cards Deck End -->
+
+
+<div style="background-color:#6DD3D6; opacity:90%; transform:skewY(-1deg); margin-bottom:40px; margin-top:80px; ">
+  <div class="container text-center py-4" style="transform:skewY(1deg);">
+
+    <h3 style="padding-top:20px; padding-bottom:20px; color:white; font-size:32px;"> Vous ne faites pas encore partie de la communauté des Cats'Loveurz ? </h2>
+    <%= link_to "S'inscire", new_user_path,  method: :post, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:20px;" %>
+
+  </div>
+</div>
 
 <!-- Ask Questions -->
 <br><br>
