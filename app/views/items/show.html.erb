@@ -12,8 +12,11 @@
 						<h5 class="card-title"><%=@item.title%></h5>
 						<p class="card-text">Description : <%=@item.descript%></p>
 						<p class="card-text">Prix : <%=@item.price%>€</p>
+						<%= link_to "Ajouter au panier", carts_path(item_id: params[:id]),  method: :post, class:"btn btn-outline-primary" %> 
+						
+
 					</div>
 				</div>
 			</div>
-	</body>
+				</body>
 </html>
