@@ -23,7 +23,7 @@ body {
 	      <%if @user.avatar.attached?%>
           <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image mx-auto", style:"width:28%;"%>
         <%else%>
-          <div class="avatar" style="padding-bottom:20px; border-radius:10px; max-auto">
+          <div class="avatar" style="padding-bottom:20px; border-radius:10px; max-auto; margin-top:20px;">
             <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="card-image">
           </div>
 	       <%end%>
@@ -57,7 +57,7 @@ body {
                     <div class="row max-auto">
 
                         <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
-                          <img src="https://vignette.wikia.nocookie.net/lego/images/1/1f/Friendscat.jpg/revision/latest?cb=20120117181029" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                          <img src="https://vignette.wikia.nocookie.net/lego/images/1/1f/Friendscat.jpg/revision/latest?cb=20120117181029" alt="Circle Image" class="img-circle img-no-padding img-responsive" >
                         </div>
                         <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
                           <h6>Commande n° : <%=i%> </h6>
