@@ -71,6 +71,7 @@ body {
                   <% i = i + 1 %>
                 <%end%>
 
+                <%if @order.where(user_id: current_user.id).count != 0 %>
 
                 <% @item = [] %>
                 <% @order.where(user_id: current_user.id).each do |t| %>
@@ -79,6 +80,8 @@ body {
                 <br><br><br>
                 <p> <strong> Prix total de mes commandes :</strong> <%= @item.sum %> </p>
                 <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count%></p>
+
+                <%end%>
 
               </ul>
             </div>
