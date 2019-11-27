@@ -24,37 +24,22 @@
       <%@nombreItem = Cart.where(user_id:current_user.id)%>
     <%end%>
 
-
-
     <!-- NavBar -->
 
-
-
-
-
-
       <nav class="navbar navbar-expand-lg bg-primary fixed-top">
-        <div class="container">
+        <div class="container ml-0">
+	  <img src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif" class="col-lg-1 mb-4 ml-0">
           <a class="navbar-brand" href="<%= root_path %>" style="font-size:28px;">Katchup</a>
-
+          <a class="nav-link navbar-brand" href="#"><span class="sr-only">(current)</span>Catégories</a>
+          <a class="nav-link navbar-brand" <%=link_to "L'équipe", teams_path %> </a>
+          <a class="nav-link navbar-brand" <%=link_to "Nous contacter", contacts_path%> </a>
           <button class="navbar-toggler navbar-toggler-right burger-menu" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbar-primary">
             <ul class="navbar-nav ml-auto">
 
               <li class="nav-item">
-
-                <li class="nav-item dropdown navbar-toggler-left">
-                  <a class="nav-link navbar-brand" <%=link_to "L'équipe", teams_path %> </a>
-                </li>
-
-                <li class="nav-item dropdown navbar-toggler-left">
-                  <a class="nav-link navbar-brand" <%=link_to "Nous contacter", contacts_path%> </a>
-                </li>
 
                 <li class="nav-item dropdown navbar-toggler-right">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,7 +63,7 @@
 
                 <% if user_signed_in? %>
                   <li class="nav-item">
-                       <a class="nav-link" href="<%=user_cart_path(current_user,1)%>"><i class="fas fa-cart-plus fa-4x"></i><%=@nombreItem.count%></a>
+                       <a class="nav-link" href="<%=user_cart_path(current_user,1)%>"><i class="fas fa-cart-plus fa-4x"></i> <%=@nombreItem.count%></a>
                   </li>
                 <%end%>
 
@@ -89,6 +74,7 @@
 
         </div>
       </nav>
+
 
   <!-- End NavBar -->
 
