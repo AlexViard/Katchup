@@ -13,26 +13,26 @@ body {
 <body>
 
 <div class="container card card-body" style="padding-bottom:40px; border-radius:20px; background-color:white; opacity:92%; margin-top:80px; margin-bottom:80px;">
-  <a class="text-center">
-    <h1>Page Profil <%= current_user.first_name %><%=@user.id%></h1>
-  </a>
+    <h1 class="text-center">Page Profil <%= current_user.first_name %><%=@user.id%></h1>
 
   <div class="section profile-content">
     <div class="container" >
       <div class="owner">
         <div class="name">
-          <h4 class="title"><%=current_user.email%>
-            <br />
-	    <br>
-	    <br>
-          </h4>
-	<%if @user.avatar.attached?%>
-          <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image"%>
+          <h4 class="title"><%=current_user.email%></h4>
+
+	      <%if @user.avatar.attached?%>
+          <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image mx-auto", style:"width:28%;"%>
         <%else%>
+<<<<<<< HEAD
           <div class="avatar" style="padding-bottom:20px; border-radius:10px;">
             <img src="https://i.ebayimg.com/images/g/2doAAOSww85aXhgH/s-l300.jpg" alt="Circle Image" class="card-image">
+=======
+          <div class="avatar" style="padding-bottom:20px; border-radius:10px; max-auto">
+            <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="card-image">
+>>>>>>> c7de8fe3d56ff8c66d23a9876c0b2e78b29932f5
           </div>
-	<%end%>
+	       <%end%>
         </div>
       </div>
 
@@ -41,10 +41,10 @@ body {
         <div class="nav-tabs-wrapper">
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Kat order</a>
+              <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Historique de mes commandes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#following" role="tab">Setting</a>
+              <a class="nav-link" data-toggle="tab" href="#following" role="tab">Mes options</a>
             </li>
           </ul>
         </div>
@@ -57,11 +57,10 @@ body {
               <ul class="list-unstyled follows">
 
                 <% i = 1 %>
-                <% @price_item = 0 %>
 
                 <% @order.where(user_id: current_user.id).each do |t| %>
                   <li>
-                    <div class="row">
+                    <div class="row max-auto">
 
                         <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
                           <img src="https://vignette.wikia.nocookie.net/lego/images/1/1f/Friendscat.jpg/revision/latest?cb=20120117181029" alt="Circle Image" class="img-circle img-no-padding img-responsive">
@@ -69,10 +68,7 @@ body {
                         <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
                           <h6>Commande n° : <%=i%> </h6>
                           <small>Identifiant de la commande : <%=t.id%></small><br>
-
-                          <% @price_item += Item.find(t.item_id).price %>
-
-                          <small>Prix total de la commande : <%=@price_item%></small>
+                          <small>Prix total de la commande :  <%= Item.find(t.item_id).price %> €</small>
 
                         </div>
                     </div>
@@ -80,16 +76,25 @@ body {
                   <% i = i + 1 %>
                 <%end%>
 
+
+                <% @item = [] %>
+                <% @order.where(user_id: current_user.id).each do |t| %>
+                <% @item << Item.find(t.item_id).price %>
+                <%end%>
+                <br><br><br>
+                <p> <strong> Prix total de mes commandes :</strong> <%= @item.sum %> </p>
+                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count%></p>
+
               </ul>
             </div>
-            
+
           </div>
         </div>
         <div class="tab-pane text-center" id="following" role="tabpanel">
 	  <h6> change profil picture </h6><br>
           <%= form_tag user_avatar_index_path(@user), multipart: true do %>
           <%= file_field_tag :avatar %>
-	  <%= submit_tag "mettre à jour" %>
+	        <%= submit_tag "mettre à jour" %>
           <% end %>
 	  <br>
           <button class="btn btn-warning btn-round"><a href="<%= edit_user_registration_path %>">Edit profil</a></button>
