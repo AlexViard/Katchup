@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	
+
     before_action :connected_user, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user, only: [:show, :edit, :update, :destroy]
 
@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 	def show
 	# Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
 		@user = User.find(params[:id])
+		@order = Order.all
+		@item = Item.all
+
 	end
 
 	def new
