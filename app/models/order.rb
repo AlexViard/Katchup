@@ -12,15 +12,5 @@ class Order < ApplicationRecord
   	def administrator_email
   	  OrderMailer.administrator_email(self, self.user).deliver_now
   	end
-	#after_create :customer_email
-	#after_create :administrator_email
 
-	#def customer_email
-  #	  OrderMailer.customer_email(self).deliver_now
-  #	end
-
-  #	def admnistrator_email
-  #	  OrderMailer.administrator_email(self).deliver_now
-  #	end
-  #	end
 end

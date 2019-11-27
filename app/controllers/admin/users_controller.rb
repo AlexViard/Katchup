@@ -4,6 +4,20 @@ class Admin::UsersController < Admin::BasesController
 		@users = User.all
 	end
 
+	def new
+		@user = User.new
+	end
+
+	def create
+			@user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], is_admin: params[:is_admin], password: params[:password])
+      if @user.save
+        flash[:success] = "L'utilisateur a bien etait creer !"
+        redirect_to admin_users_path
+      else
+        render :new
+      end
+	end
+
 	def edit
 			@user = User.find(params[:id])
 	end
@@ -17,4 +31,10 @@ class Admin::UsersController < Admin::BasesController
         render :edit
       end
 	end
+
+	def destroy
+      @user = User.find(params[:id])
+      @user.delete
+      redirect_to admin_users_path
+    end
 end
