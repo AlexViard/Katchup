@@ -8,7 +8,7 @@ class ChargesController < ApplicationController
   	  @carts.each do |t|
   	  	@amount = Item.find(t.item_id).price
   	  end
-  	  
+
 
 	  customer = Stripe::Customer.create({
 	    email: params[:stripeEmail],
@@ -25,7 +25,7 @@ class ChargesController < ApplicationController
 	  	@carts.each do |t|
 	  		Order.create(user_id: params[:user_id], item_id: t.item_id)
 	  	end
-	  	flash[:sucess] = "Inscription à l'événement payer"
+	  	flash[:sucess] = "Ta commande a bien été prise en compte !"
 	  	redirect_to root_path
 	  end
 
