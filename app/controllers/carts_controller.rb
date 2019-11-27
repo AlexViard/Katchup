@@ -9,6 +9,7 @@ class CartsController < ApplicationController
     @cart = Cart.where(user_id: params[:user_id])
     @item = Item.all
     @order = Order.new
+
   end
 
   def new
@@ -22,7 +23,8 @@ class CartsController < ApplicationController
 
     @cart = Cart.create(user_id: current_user.id, item_id: params[:item_id])
     #Creates a new cart that keeps the same id (user_id) which means that there will be only one cart
-    redirect_to root_path
+    redirect_to root_path(anchor: "ajout_recent")
+
   end
 
   def edit
