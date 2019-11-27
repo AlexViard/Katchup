@@ -18,7 +18,7 @@ body {
   </a>
 
   <div class="section profile-content">
-    <div class="container">
+    <div class="container" >
       <div class="owner">
         <div class="name">
           <h4 class="title"><%=current_user.email%>
@@ -27,10 +27,10 @@ body {
 	    <br>
           </h4>
 	<%if @user.avatar.attached?%>
-          <%= image_tag @user.avatar, alt: 'avatar' %>
+          <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image"%>
         <%else%>
           <div class="avatar" style="padding-bottom:20px; border-radius:10px;">
-            <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="img-circle img-responsive">
+            <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="card-image">
           </div>
 	<%end%>
         </div>
@@ -55,35 +55,34 @@ body {
           <div class="row">
             <div class="col-md-6 ml-auto mr-auto">
               <ul class="list-unstyled follows">
-                <li>
-                  <div class="row">
-                    <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
-                      <img src="https://vignette.wikia.nocookie.net/lego/images/1/1f/Friendscat.jpg/revision/latest?cb=20120117181029" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+
+                <% i = 1 %>
+                <% @price_item = 0 %>
+
+                <% @order.where(user_id: current_user.id).each do |t| %>
+                  <li>
+                    <div class="row">
+
+                        <div class="col-lg-2 col-md-4 col-4 ml-auto mr-auto">
+                          <img src="https://vignette.wikia.nocookie.net/lego/images/1/1f/Friendscat.jpg/revision/latest?cb=20120117181029" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        </div>
+                        <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
+                          <h6>Commande n° : <%=i%> </h6>
+                          <small>Identifiant de la commande : <%=t.id%></small><br>
+
+                          <% @price_item += Item.find(t.item_id).price %>
+
+                          <small>Prix total de la commande : <%=@price_item%></small>
+
+                        </div>
                     </div>
-                    <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
-                      <h6>order number 034346 <%=@user.id%>
-                        <br/>
-                        <small>cats</small>
-                      </h6>
-                    </div>
-                  </div>
-                </li>
-                <hr />
-                <li>
-                  <div class="row">
-                    <div class="col-lg-2 col-md-4 col-4 mx-auto ">
-                      <img src="https://img.brickowl.com/files/image_cache/larger/lego-cat-with-yellow-eyes-6175-25-916554.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                    </div>
-                    <div class="col-lg-7 col-md-4 col-4 ml-auto mr-auto">
-                      <h6>order number 049294 <%=@user.id%>
-                        <br />
-                        <small>cats</small>
-                      </h6>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                  <% i = i + 1 %>
+                <%end%>
+
               </ul>
             </div>
+            
           </div>
         </div>
         <div class="tab-pane text-center" id="following" role="tabpanel">
@@ -100,6 +99,3 @@ body {
   </div>
 </div>
 </body>
-
-</html>
-
