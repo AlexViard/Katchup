@@ -21,5 +21,9 @@ class Order < ApplicationRecord
 
   #	def admnistrator_email
   #	  OrderMailer.administrator_email(self).deliver_now
+<<<<<<< HEAD
   #	end
+=======
+  #	end 
+>>>>>>> 97fc2dfe47058832aa768eb49a947b22b850477d
 end

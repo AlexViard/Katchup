@@ -20,7 +20,6 @@ body {
       <div class="owner">
         <div class="name">
           <h4 class="title"><%=current_user.email%></h4>
-
 	      <%if @user.avatar.attached?%>
           <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image mx-auto", style:"width:28%;"%>
         <%else%>
@@ -79,7 +78,7 @@ body {
                 <%end%>
                 <br><br><br>
                 <p> <strong> Prix total de mes commandes :</strong> <%= @item.sum %> </p>
-                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count%></p>
+                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count %></p>
 
                 <%end%>
 
