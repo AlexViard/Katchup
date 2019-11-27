@@ -20,17 +20,11 @@ body {
       <div class="owner">
         <div class="name">
           <h4 class="title"><%=current_user.email%></h4>
-
 	      <%if @user.avatar.attached?%>
           <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image mx-auto", style:"width:28%;"%>
         <%else%>
-<<<<<<< HEAD
-          <div class="avatar" style="padding-bottom:20px; border-radius:10px;">
-            <img src="https://i.ebayimg.com/images/g/2doAAOSww85aXhgH/s-l300.jpg" alt="Circle Image" class="card-image">
-=======
           <div class="avatar" style="padding-bottom:20px; border-radius:10px; max-auto">
             <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="card-image">
->>>>>>> c7de8fe3d56ff8c66d23a9876c0b2e78b29932f5
           </div>
 	       <%end%>
         </div>
@@ -83,7 +77,7 @@ body {
                 <%end%>
                 <br><br><br>
                 <p> <strong> Prix total de mes commandes :</strong> <%= @item.sum %> </p>
-                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count%></p>
+                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count %></p>
 
               </ul>
             </div>
