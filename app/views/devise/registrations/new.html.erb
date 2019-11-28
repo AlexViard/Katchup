@@ -18,7 +18,8 @@ body {
       <br><br><br>
       <%= form_for resource, as: resource_name, url: registration_path(resource_name), html: { class: "form-signin mt-3" } do |f| %>
         <h1 class="h3 mb-3 font-weight-normal text-center" style="font-size:58px;">Sign up</h1>
-        <%= devise_error_messages! %>
+  
+          <%= devise_error_messages! %>
 
         <div class="social-line text-center">
           <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon mt-0">
@@ -30,6 +31,15 @@ body {
           <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon mt-0">
             <i class="fa fa-twitter"></i>
           </a>
+        </div>
+
+        <div class="field">
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "form-control"  %>
+        </div>
+        <div class="field">
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", class: "form-control"  %>
         </div>
 
         <div class="form-group">
