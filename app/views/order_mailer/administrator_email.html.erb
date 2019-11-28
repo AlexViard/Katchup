@@ -152,13 +152,14 @@
                                         
 
                                          <p style="line-height: 24px; margin-bottom:20px;">
-                                         S'il a commandé plusieurs photos, tu vas recevoir un bilan de sa commande en plusieurs emails. Voici une des photos:
-                                          <% @item_image = Item.find(@order.item_id) %>
+                                         Bilan de la commande. Voici les photos:
                                           <br>
                                           <br>
                                           <br>
                                           <br>
-                                          <img src =" <%= @item_image.image_url %>" >
+                                          <% @cart_item.each do |t| %>
+                                            <img src ="<%=Item.find(t.item_id).image_url %>">
+                                          <%end%>
 
                                          </p>
 

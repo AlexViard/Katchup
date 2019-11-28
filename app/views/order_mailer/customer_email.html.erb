@@ -6,7 +6,6 @@
 
 
 
-
     <!-- Image of top -->
  <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="2a2e36">
 
@@ -158,9 +157,9 @@
                                           <br>
                                           <br>
                                           <br>
-                                          <% @item_image = Item.find(@order.item_id) %>
-                                          <img src =" <%= @item_image.image_url %>" >
-
+                                          <% @cart_item.each do |t| %>
+                                            <img src ="<%=Item.find(t.item_id).image_url %>">
+                                          <%end%>
                                          </p>
                                           <p style="line-height: 24px; margin-bottom:20px;">
                                            Pour accéder à ton espace client, connecte-toi via : 

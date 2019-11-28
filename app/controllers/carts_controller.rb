@@ -6,7 +6,8 @@ class CartsController < ApplicationController
 
   def show
     # Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
-    @cart = Cart.where(user_id: params[:user_id])
+    @cart = Cart.find(current_user.id)
+    @cart_item = CartItem.where(cart_id:@cart.id)
     @item = Item.all
     @order = Order.new
 
@@ -21,7 +22,7 @@ class CartsController < ApplicationController
     # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
     # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
 
-    @cart = Cart.create(user_id: current_user.id, item_id: params[:item_id])
+    CartItem.create(cart: @cart, item_id: params[:item_id])
     #Creates a new cart that keeps the same id (user_id) which means that there will be only one cart
     redirect_to root_path(anchor: "ajout_recent")
 
@@ -42,6 +43,6 @@ class CartsController < ApplicationController
     # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
     @cart = Cart.find(params[:item_id])
     @cart.destroy
-    redirect_to user_cart_path(current_user.id, 1)
+    redirect_to cart_path(current_user.id)
   end
 end

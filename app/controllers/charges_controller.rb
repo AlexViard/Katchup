@@ -3,10 +3,11 @@ class ChargesController < ApplicationController
   end
 
   def create
-  	  @carts = Cart.where(user_id: params[:user_id])
+  	  @cart = Cart.find(current_user.id)
+  	  @cartItem = CartItem.where(cart_id:@cart.id)
   	  @amount = 0
-  	  @carts.each do |t|
-  	  	@amount = Item.find(t.item_id).price
+  	  @cartItem.each do |t|
+  	  	@amount += Item.find(t.item_id).price
   	  end
 
 
@@ -22,15 +23,14 @@ class ChargesController < ApplicationController
 	    currency: 'eur',
 	  })
 	  if charge
-	  	@carts.each do |t|
-	  		Order.create(user_id: params[:user_id], item_id: t.item_id)
-	  	end
+	  	Order.create(cart_id: @cart.id, prix_total: @amount)
+	  	@cartItem.destroy_all
 	  	flash[:sucess] = "Ta commande a bien été prise en compte !"
 	  	redirect_to root_path
 	  end
 
 	rescue Stripe::CardError => e
 	  flash[:error] = e.message
-	  redirect_to new_charge_path(@event.id)
+	  #redirect_to new_charge_path(@event.id)
    end
 end

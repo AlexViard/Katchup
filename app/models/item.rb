@@ -1,6 +1,5 @@
 class Item < ApplicationRecord
-	has_many :carts
-	has_many :users, through: :cart
+	has_many :carts, through: :cart_item
 	has_many :orders
 
   	validates :title, presence: true,
