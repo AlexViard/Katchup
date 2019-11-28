@@ -1,3 +1,9 @@
+Website link: https://katchup-app.herokuapp.com/
+
+On this website, you can order pictures of cats. You have to log in first to be able to order. Once you've paid online, you'll get an email with the pictures ordered.
+
+
+
 process simplify : 
 - creation repos on github
 - invit work mate on github
