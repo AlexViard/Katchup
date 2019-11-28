@@ -131,8 +131,13 @@
 <div style="background-color:#6DD3D6; transform:skewY(-1deg); margin-bottom:40px; margin-top:80px; ">
   <div class="container text-center py-4" style="transform:skewY(1deg);">
 
-    <h3 style="padding-top:40px; padding-bottom:20px; color:white; font-size:32px;"> Vous ne faites pas encore partie de la communauté des Cats'Loveurz ? </h2>
-    <%= link_to "Rejoignez-nous !", new_user_path,  method: :post, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
+    <% if user_signed_in?  %>
+      <h3 style="padding-top:40px; padding-bottom:20px; color:white; font-size:32px;"> Vous souhaitez valider votre panier ? Izy, c'est par là !</h3>
+      <%= link_to "Voir mon Panier", cart_path(Cart.find(current_user.id)),  method: :get, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
+    <%else%>
+      <h3 style="padding-top:40px; padding-bottom:20px; color:white; font-size:32px;"> Vous ne faites pas encore partie de la communauté des Cats'Loveurz ? </h3>
+      <%= link_to "Rejoignez-nous !", new_user_path,  method: :post, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
+    <%end%>
 
   </div>
 </div>
