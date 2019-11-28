@@ -3,12 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users  do 
-  	resources :charges, only: [:create]
-  	resources :carts, only: [:show,:destroy,:create], :path => "mon_panier"
     resources :avatar, only: [:create]
-
-
-  	
   end
   resources :charges, only: [:create]
   resources :carts, only: [:show,:destroy,:create]
@@ -23,7 +18,6 @@ Rails.application.routes.draw do
     resources :items
     resources :orders
   end
-
   resources :teams, only:[:index]
   resources :contacts, only:[:index]
 end
