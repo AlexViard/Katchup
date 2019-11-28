@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :avatar, only: [:create]
   end
   resources :charges, only: [:create]
-  resources :carts, only: [:show,:destroy,:create], :path => "mon_panier"
+  resources :carts, only: [:show,:destroy,:create]
   resources :cart_items, only: [:create, :destroy]
   resources :items
   resources :orders
