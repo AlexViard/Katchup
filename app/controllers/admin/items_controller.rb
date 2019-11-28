@@ -5,13 +5,20 @@ class Admin::ItemsController < Admin::BasesController
   end
 
   def new
-    # Méthode qui crée un potin vide et l'envoie à une view qui affiche le formulaire pour 'le remplir' (new.html.erb)
+    @item = Item.new
   end
 
   def create
-    # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
-    # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
-    # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
+    @item = Items.new(title: params[:title], descript: params[:descript], price: params[:price], image_url: params[:image_url])
+    if @item.save
+      flash[:success] = "L'item a bien etait creer"
+      redirect_to admin_items_path
+    else
+      flash[:success] = "Nous avons rencontré une erreur"
+      render :new
+
+
+    end
   end
 
   def edit
