@@ -1,17 +1,30 @@
-<div class="container align-items-center row mx-auto" style="margin-top: 100px; align-content:center;" >
+<div class="container align-items-center row mx-auto" style="margin-top: 120px; align-content:center;" >
   <div style="vertical-align: middle;">
-  <a href="<%= admin_root_path %>" class=" pull-left btn btn-danger btn-just-icon">
-    <i class="fas fa-arrow-left fa-2x"></i>
-  </a>
+    <a href="<%= admin_root_path %>" class=" pull-left btn btn-danger btn-just-icon">
+      <i class="fas fa-arrow-left fa-2x"></i>
+    </a>
   </div>
   <div class="card mx-auto" style="width: 20rem;">
-  <div class="card-body">
-    <p><i class="fab fa-cc-visa fa-3x mx-3"></i>Items actuel : <%= @orders.count %></p>
+    <div class="card-body">
+      <p><i class="fab fa-cc-visa fa-3x mx-3"></i>Items actuel : <%= @orders.count %></p>
+    </div>
   </div>
-</div>
+  <div style="vertical-align: middle;">
+    <%if @orders.count != 0 %>
+
+      <% @prix_total = 0 %>
+      <% @orders.each do |t| %>
+        <% @prix_total += t.prix_total.to_i %>
+      <%end%>
+        <p> <strong> CA :</strong> <%= @prix_total %>€ </p>
+        <p> <strong> Panier Moyen : </strong> <%= @prix_total/@orders.count%>€</p>
+
+    <%end%>
+  </div>
 
 </div>
 <br>
+
 
 <table class="table">
   <thead>
@@ -19,8 +32,8 @@
       <th scope="col">#</th>
       <th scope="col">ID</th>
       <th scope="col">Date de creation</th>
-      <th scope="col">User ID</th>
-      <th scope="col">Item ID</th>
+      <th scope="col">Cart ID</th>
+      <th scope="col">Price</th>
     </tr>
   </thead>
   <tbody>
@@ -30,9 +43,22 @@
       <th scope="row"><% index %></th>
       <td><%= t.id %></td>
       <td><%= t.created_at %></td>
-      <td><%= t.user_id %></td>
-      <td><%= t.item_id %></td>
+      <td><%= t.cart_id %></td>
+      <td><%= t.prix_total %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
+
+
+
+<%if @orders.count != 0 %>
+
+  <% @prix_total = 0 %>
+  <% @orders.each do |t| %>
+    <% @prix_total += t.prix_total.to_i %>
+  <%end%>
+    <br><br><br>
+    <p> <strong> CA :</strong> <%= @prix_total %>€ </p>
+    <p> <strong> Mon panier Moyen : </strong> <%= @prix_total/@orders.count%>€</p>
+<%end%>
