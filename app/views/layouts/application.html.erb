@@ -26,9 +26,15 @@
 
     <!-- NavBar -->
 
+<<<<<<< HEAD
       <nav class="navbar navbar-expand-lg bg-primary fixed-top">
         <div class="container mx-0">
 	  <img src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif" class="col-lg-1 mb-4 ml-0">
+=======
+      <nav class="navbar navbar-expand-lg bg-primary fixed-top mx-auto" >
+        <div class="container ml-0">
+	        <img src="https://www.petbarn.com.au/skin/frontend/enterprise/petbarn/images/dropdowns/dropdown_cat.gif" class="col-lg-1 mb-4 ml-0">
+>>>>>>> 5edea91b63c90a412a86e6678a067822f0e34c9d
           <a class="navbar-brand" href="<%= root_path %>" style="font-size:28px;">Katchup</a>
           <a class="nav-link navbar-brand" href="#"><span class="sr-only">(current)</span>Catégories</a>
           <a class="nav-link navbar-brand" <%=link_to "L'équipe", teams_path %> </a>
@@ -59,13 +65,12 @@
                     <%end%>
 
                   </div>
-                </li>
 
-                <% if user_signed_in? %>
-                  <li class="nav-item">
-                       <a class="nav-link" href="<%=user_cart_path(current_user,1)%>"><i class="fas fa-cart-plus fa-4x"></i> <%=@nombreItem.count%></a>
-                  </li>
-                <%end%>
+                  <% if user_signed_in? %>
+                    <li class="nav-item">
+                         <a class="nav-link" href="<%=user_cart_path(current_user,1)%>"><i class="fas fa-cart-plus fa-4x"></i> <%=@nombreItem.count%></a>
+                    </li>
+                  <%end%>
 
                 </li>
 

@@ -34,7 +34,7 @@
                   <div id="informations" class=" ">
                   <%= link_to "Supprimer", user_cart_path(user_id:current_user.id, item_id: t.id),  method: :delete, class:"btn btn-outline-danger" %>
                   <%prix_total += @item.find(t.item_id).price%>
-                  <%= link_to "Fiche Produit", item_path(t),  class:"btn btn-outline-primary", style:"opacity:70%;" %>
+                  <%= link_to "Fiche Produit", item_path(t.item_id),  class:"btn btn-outline-primary", style:"opacity:70%;" %>
                   </div>
                 </div>
 

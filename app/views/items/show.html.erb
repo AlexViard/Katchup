@@ -22,29 +22,7 @@
 
 						<div class="col-4">
 
-							<img src="<%= @item.image_url %>" class="card card-body" style="border-radius:10px;" data-toggle="modal" data-target="#myModal">
-
-													<!-- Modal -->
-						  <div class="modal fade" id="myModal" role="dialog">
-						    <div class="modal-dialog">
-
-						      <!-- Modal content-->
-						      <div class="modal-content" style="width:140%;">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal">&times;</button>
-						          <h4 class="modal-title">Comtemple le Cat !</h4>
-						        </div>
-						        <div class="modal-body" >
-											<img src="<%= @item.image_url %>" class="card card-body" style="border-radius:10px; width:100%;" >
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						        </div>
-						      </div>
-
-						    </div>
-						  </div>
-
+							<img src="<%= @item.image_url %>" class="card card-body" style="border-radius:10px;" >
 
 						</div>
 
@@ -91,5 +69,7 @@
 		}
 
 		btn.addEventListener("click",Click);
+
+
 	</script>
 </html>
