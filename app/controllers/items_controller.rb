@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @cart = Cart.all
+    @cart = CartItem.all
     @item = Item.find(params[:id])
     # Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
   end

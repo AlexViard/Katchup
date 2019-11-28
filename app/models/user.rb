@@ -7,9 +7,13 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   after_create :welcome_send
+  after_create :cart
 
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
+  end
+  def cart
+    Cart.create(user: self)
   end
   #validates :first_name, presence: true
   #validates :last_name, presence: true

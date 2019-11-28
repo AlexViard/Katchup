@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-  	resources :charges, only: [:create]
-  	resources :carts, only: [:show,:destroy,:create]
   	resources :avatar, only: [:create]
   end
+  resources :charges, only: [:create]
+  resources :carts, only: [:show,:destroy,:create]
+  resources :cart_items, only: [:create, :destroy]
   resources :items
   resources :orders
 

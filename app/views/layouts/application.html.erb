@@ -19,9 +19,10 @@
   </head>
 
   <body>
-    <%@cart = Cart.all%>
+
     <% if user_signed_in? %>
-      <%@nombreItem = Cart.where(user_id:current_user.id)%>
+      <%@cart = Cart.find(current_user.id)%>
+      <%@nombreItem = CartItem.where(cart:@cart)%>
     <%end%>
 
     <!-- NavBar -->
@@ -63,7 +64,7 @@
 
                 <% if user_signed_in? %>
                   <li class="nav-item">
-                       <a class="nav-link" href="<%=user_cart_path(current_user,1)%>"><i class="fas fa-cart-plus fa-4x"></i> <%=@nombreItem.count%></a>
+                       <a class="nav-link" href="<%=cart_path(Cart.find(current_user.id))%>"><i class="fas fa-cart-plus fa-4x"></i> <%=@nombreItem.count%></a>
                   </li>
                 <%end%>
 
