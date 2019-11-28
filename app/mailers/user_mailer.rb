@@ -1,4 +1,5 @@
 class UserMailer < ApplicationMailer
+	 default from: 'no-reply@katchup-app.fr'
 
 	  def welcome_email(user)
 		   
