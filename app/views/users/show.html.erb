@@ -12,7 +12,7 @@ body {
 
 <body>
 
-<div class="container card card-body" style="padding-bottom:40px; border-radius:20px; background-color:white; opacity:92%; margin-top:80px; margin-bottom:80px;">
+<div class="container card card-body" style="padding-bottom:0px; border-radius:20px; background-color:white; opacity:92%; margin-top:120px; margin-bottom:80px;">
     <h1 class="text-center">Page Profil <%= current_user.first_name %><%=@user.id%></h1>
 
   <div class="section profile-content">
@@ -24,7 +24,7 @@ body {
           <%= image_tag @user.avatar, alt: 'avatar', class:"card card-image mx-auto", style:"width:28%;"%>
         <%else%>
           <div class="avatar" style="padding-bottom:20px; border-radius:10px; max-auto; margin-top:20px;">
-            <img src="https://cdn.toypro.com/media/cache/my_thumb_big/uploads/images/custom/13292-src.jpg" alt="Circle Image" class="card-image">
+            <img src="http://www.cinemas-utopia.org/admin/films_img/img37/3637.jpeg" alt="Circle Image" class="card-image">
           </div>
 	       <%end%>
         </div>
@@ -91,7 +91,7 @@ body {
 	  <h6> change profil picture </h6><br>
           <%= form_tag user_avatar_index_path(@user), multipart: true do %>
           <%= file_field_tag :avatar %>
-	        <%= submit_tag "mettre à jour" %>
+          <%= submit_tag "mettre à jour" %>
           <% end %>
 	  <br>
           <button class="btn btn-warning btn-round"><a href="<%= edit_user_registration_path %>">Edit profil</a></button>

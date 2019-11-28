@@ -1,0 +1,55 @@
+<style>
+
+body {
+  background-image : url('https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_960_720.jpg');
+  image-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  height:30em;
+}
+
+</style >
+
+<body>
+
+
+  <div class="container card card-body" style="padding-bottom:40px; border-radius:20px; background-color:white; opacity:96%; margin-top:80px; margin-bottom:80px;">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+
+        <h2 class="title"> Modifier un utilisateur</h2>
+            <%= form_tag url_for(action: 'create'), method: 'post' do %>
+
+              <%= label_tag "Image de l'utilisateur" %><br />
+              <%= file_field_tag :avatar %>
+              <br /> <br />
+
+              <%= label_tag 'first_name' %>
+              <%= text_field_tag 'first_name', @user.first_name, class: "form-control" %>
+              <br /> <br />
+
+              <%= label_tag 'last_name' %>
+              <%= text_field_tag 'last_name', @user.last_name, class: "form-control" %>
+              <br /> <br />
+
+              <%= label_tag 'email' %>
+              <%= text_field_tag 'email', @user.email, class: "form-control" %>
+              <br /> <br />
+
+
+              <%= label_tag 'password' %>
+              <%= text_field_tag 'password', @user.email, class: "form-control" %>
+              <br /> <br />
+
+              <%= label_tag 'Admin ?' %>
+              <%= check_box_tag 'is_admin', @user.is_admin, value: true%>
+              <br /> <br />
+
+              <center><%= submit_tag "Creer l'utilisateur", class:"btn btn-outline-primary" %></center>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+
+</body>
