@@ -35,6 +35,10 @@ class Admin::UsersController < Admin::BasesController
 
 	def destroy
       @user = User.find(params[:id])
+			@cart = Cart.find(@user.id)
+			@cart_item = CartItem.where(cart_id: @cart.id)
+			@cart_item.destroy_all
+			@cart.delete
       @user.delete
       redirect_to admin_users_path
     end

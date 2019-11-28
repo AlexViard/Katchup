@@ -36,6 +36,8 @@ class Admin::ItemsController < Admin::BasesController
 
   def destroy
     @item = Item.find(params[:id])
+    @cart_item = CartItem.where(item_id: @item.id)
+    @cart_item.destroy_all
     @item.delete
     redirect_to admin_items_path
   end

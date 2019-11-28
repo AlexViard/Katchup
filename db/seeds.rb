@@ -6,10 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Item.destroy_all
-User.destroy_all
-Cart.destroy_all
-CartItem.destroy_all
+@i = Item.all
+CartItem.where(item_id: @i.ids).destroy_all
+@i.destroy_all
+@us = User.all
+@ca = Cart.all
+Order.where(cart_id:@ca.ids).destroy_all
+Cart.where(user_id:@us.ids).destroy_all
+@us.destroy_all
+
+
+
+
 
 picture_tab = ["https://active-storage-katchup.s3.eu-west-3.amazonaws.com/dog-2606759_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-1285634_640.png" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/pets-3715733_640.jpg" ,  "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-2143332_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-1393075_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-1508613_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/pug-801826_640.jpg", "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-4611189_640.jpg", "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-3266673_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-649164_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-323262_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/cat-2934720_640.jpg" ,"https://active-storage-katchup.s3.eu-west-3.amazonaws.com/animal-339400_640.jpg" , "https://active-storage-katchup.s3.eu-west-3.amazonaws.com/kitty-2948404_640.jpg"]
 
