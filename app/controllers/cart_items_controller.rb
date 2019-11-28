@@ -2,7 +2,9 @@ class CartItemsController < ApplicationController
   def create
    
     @cart = Cart.find(current_user.id)
-    CartItem.create(cart: @cart, item_id: params[:item_id])
+    if CartItem.create(cart: @cart, item_id: params[:item_id])
+      flash[:sucess] = "Item ajouté au panier"
+    end
     #Creates a new cart that keeps the same id (user_id) which means that there will be only one cart
     redirect_to root_path(anchor: "ajout_recent")
 

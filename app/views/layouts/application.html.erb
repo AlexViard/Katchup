@@ -24,7 +24,6 @@
       <%@cart = Cart.find(current_user.id)%>
       <%@nombreItem = CartItem.where(cart:@cart)%>
     <%end%>
-
     <!-- NavBar -->
 
       <nav class="navbar navbar-expand-lg bg-primary fixed-top">
@@ -85,9 +84,28 @@
 
 
     <!-- end nav 2 test -->
-
+    <% if flash[:loggin_needed].present? %>
+      <div id="error_explanation" style="margin-top: 90px; margin-bottom: -16px;">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong><%= flash[:loggin_needed] %></strong> 
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    <%elsif flash[:sucess].present?%>
+      <div id="sucess_explanation" style="margin-top: 90px; margin-bottom: -16px;">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong><%= flash[:sucess] %></strong> 
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    <% end %>
 
     <%= yield %>
+
   </body>
   <!-- Footer -->
   <footer class="page-footer bg-primary text-white">

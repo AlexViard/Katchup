@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
+  before_action :connected_user, only: [:show, :destroy, :create]
   before_action :current_user_cart, only: [:show, :create, :destroy]
+  
   def index
     
   end
@@ -41,9 +43,22 @@ class CartsController < ApplicationController
   private
 
   def current_user_cart
-    cart = Cart.find(current_user.id)
-    if current_user == cart.user_id
-      flash[:loggin_needed] = "Not your cart"
+    if user_signed_in?
+      cart = Cart.find(current_user.id)
+      if current_user == cart.user_id
+        flash[:loggin_needed] = "Not your cart"
+        redirect_to root_path
+      end
+    else
+      flash[:loggin_needed] = "Not connected"
+    end
+  end
+
+  private
+
+  def connected_user
+    if current_user.nil?
+      flash[:loggin_needed] = "Please log in."
       redirect_to root_path
     end
   end
