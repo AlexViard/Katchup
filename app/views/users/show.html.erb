@@ -13,7 +13,7 @@ body {
 <body>
 
 <div class="container card card-body" style="padding-bottom:0px; border-radius:20px; background-color:white; opacity:92%; margin-top:120px; margin-bottom:80px;">
-    <h1 class="text-center">Page Profil <%= current_user.first_name %><%=@user.id%></h1>
+    <h1 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h1>
 
   <div class="section profile-content">
     <div class="container" >
