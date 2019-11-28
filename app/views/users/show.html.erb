@@ -52,7 +52,7 @@ body {
 
                 <% i = 1 %>
 
-                <% @order.where(user_id: current_user.id).each do |t| %>
+                <% @order.each do |t| %>
                   <li>
                     <div class="row max-auto">
 
@@ -62,7 +62,7 @@ body {
                         <div class="col-lg-7 col-md-4 col-4  ml-auto mr-auto">
                           <h6>Commande n° : <%=i%> </h6>
                           <small>Identifiant de la commande : <%=t.id%></small><br>
-                          <small>Prix total de la commande :  <%= Item.find(t.item_id).price %> €</small>
+                          <small>Prix total de la commande : <%=t.prix_total%>€</small>
 
                         </div>
                     </div>
@@ -70,16 +70,15 @@ body {
                   <% i = i + 1 %>
                 <%end%>
 
-                <%if @order.where(user_id: current_user.id).count != 0 %>
+                <%if @order.count != 0 %>
 
-                <% @item = [] %>
-                <% @order.where(user_id: current_user.id).each do |t| %>
-                <% @item << Item.find(t.item_id).price %>
-                <%end%>
-                <br><br><br>
-                <p> <strong> Prix total de mes commandes :</strong> <%= @item.sum %> </p>
-                <p> <strong> Mon panier Moyen : </strong> <%= @item.sum/@order.where(user_id: current_user.id).count %></p>
-
+                  <% prix_total = 0 %>
+                  <% @order.each do |t| %>
+                    <% prix_total += t.prix_total.to_i %>
+                  <%end%>
+                    <br><br><br>
+                    <p> <strong> Prix total de mes commandes :</strong> <%= prix_total %>€ </p>
+                    <p> <strong> Mon panier Moyen : </strong> <%= prix_total/@order.count%>€</p>
                 <%end%>
 
               </ul>

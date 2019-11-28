@@ -36,7 +36,7 @@
 							<p class="card-text"><strong>Description :</strong> <%=@item.descript%></p>
 							</div>
 							<% if user_signed_in? %>
-								<%= link_to "Ajouter au panier", user_carts_path(user_id:current_user.id, item_id:@item.id),  method: :post, class:"btn btn-outline-primary" %>
+								<%= link_to "Ajouter au panier", cart_items_path(item_id:@item.id),  method: :post, class:"btn btn-outline-primary" %>
 							<%end%>
 							<%= link_to "Retour à la liste des articles", root_path(anchor: "ajout_recent"), class:"btn btn-outline-danger", style:"opacity:70%;" %>
 							<br><br>
