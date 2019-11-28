@@ -32,14 +32,10 @@ end
 end
 
 10.times do |index|
-	u = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,email: Faker::Name.first_name + "@yopmail.com", password:"ludovic")
-	c << Cart.create(user:u)
+	u << User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name,email: Faker::Name.first_name + "@yopmail.com", password:"ludovic")
 end
 
 10.times do |index|
-	CartItem.create(cart: c.sample,item: item.sample)
+	CartItem.create(cart: Cart.find(u.sample.id),item_id: item.sample.id)
 end
 
-10.times do |index|
-	Order.create(cart_id:c.sample.id)
-end
