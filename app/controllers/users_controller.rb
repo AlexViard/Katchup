@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 	before_action :authenticate_user, only: [:show, :edit, :update, :destroy]
 
 	def index
-	# Méthode qui récupère tous les potins et les envoie à la view index (index.html.erb) pour affichage
+	
 	end
 
 	def show
-	# Méthode qui récupère le potin concerné et l'envoie à la view show (show.html.erb) pour affichage
+	
 		@user = User.find(params[:id])
 		@cart = Cart.find(current_user.id)
 		@order = Order.where(cart_id:@cart.id)

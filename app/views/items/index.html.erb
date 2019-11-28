@@ -136,7 +136,7 @@
       <%= link_to "Voir mon Panier", cart_path(Cart.find(current_user.id)),  method: :get, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
     <%else%>
       <h3 style="padding-top:40px; padding-bottom:20px; color:white; font-size:32px;"> Vous ne faites pas encore partie de la communauté des Cats'Loveurz ? </h3>
-      <%= link_to "Rejoignez-nous !", new_user_path,  method: :post, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
+      <%= link_to "Rejoignez-nous !", new_user_registration_path,  method: :get, class:"btn btn-outline-primary", style:"background-color:white; margin-bottom:40px; border-radius:20px; width:12rem;" %>
     <%end%>
 
   </div>
@@ -219,13 +219,13 @@
             <div class="col-4">
               <i class="fas fa-shopping-basket fa-5x" style="color:tomato;"></i>
               <h3> Commandez vos Chatons</h3>
-              <p> zehrkjzehrzekrj </p>
+              <p> (Disclaimer: Ce ne sont pas des vrais hein, ce sont des photos. Vous ne pensiez tout de même pas qu'on allait vendre de VRAIS chatons aussi mignons à un prix aussi faible ?) </p>
             </div>
 
             <div class="col-4">
               <i class="far fa-envelope-open fa-5x" style="color:tomato;"></i>
               <h3> Recevez vos chatons</h3>
-              <p> zehrkjzehrzekrj </p>
+              <p> Un petit clic dans vos emails et à vous les photos en HD ! </p>
             </div>
 
           </div>
@@ -242,7 +242,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h2 class="title text-primary">Vous avez encore des question ? Contactez-nous !</h2>
+          <h2 class="title text-primary">Vous avez encore des questions ? Contactez-nous !</h2>
           <p class="mb-4 lead text-white-opacity-05"></p>
           <br>
           <a href="<%=contacts_path%>" class="btn btn-outline-primary btn-round btn-lg">C'est par là</a>
