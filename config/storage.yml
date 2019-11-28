@@ -20,7 +20,7 @@ amazon:
   access_key_id: <%= ENV['AMAZON_ACCESS_KEY_ID'] %>
   secret_access_key: <%= ENV['AMAZON_SECRET_ACCESS_KEY'] %>
   region: eu-west-3 #a priori, si tu es en France, il faut mettre ici : eu-west-3
-  bucket: katshup #Mets ici le nom de ton bucket. Par exemple : prisme
+  bucket: active-storage-katchup #Mets ici le nom de ton bucket. Par exemple : prisme
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
