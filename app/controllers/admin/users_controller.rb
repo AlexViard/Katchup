@@ -24,6 +24,7 @@ class Admin::UsersController < Admin::BasesController
 
 	def update
 		@user = User.find(params[:id])
+			@user.avatar.attach(params[:avatar])
       if @user.update(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], is_admin: params[:is_admin])
         flash[:success] = "L'utilisateur a bien etait modifier !"
         redirect_to admin_users_path
