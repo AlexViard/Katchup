@@ -37,7 +37,7 @@ end
 end
 
 10.times do |index|
-	CartItem.create(cart: c.sample,item: item.sample)
+	CartItem.create(cart: c.sample,item_id: item.sample.id)
 end
 
 10.times do |index|
