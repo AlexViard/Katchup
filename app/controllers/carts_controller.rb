@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-
+  before_action :current_user_cart, only: [:show, :create, :destroy]
   def index
     
   end
@@ -10,7 +10,6 @@ class CartsController < ApplicationController
     @cart_item = CartItem.where(cart_id:@cart.id)
     @item = Item.all
     @order = Order.new
-
   end
 
   def new
@@ -37,5 +36,15 @@ class CartsController < ApplicationController
     @cart = Cart.find(params[:item_id])
     @cart.destroy
     redirect_to cart_path(current_user.id)
+  end
+
+  private
+
+  def current_user_cart
+    cart = Cart.find(current_user.id)
+    if current_user == cart.user_id
+      flash[:loggin_needed] = "Not your cart"
+      redirect_to root_path
+    end
   end
 end
