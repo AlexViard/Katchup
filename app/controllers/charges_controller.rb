@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
   	  @carts = Cart.where(user_id: params[:user_id])
   	  @amount = 0
   	  @carts.each do |t|
-  	  	@amount = Item.find(t.item_id).price
+  	  	@amount += Item.find(t.item_id).price
   	  end
 
 
@@ -17,18 +17,12 @@ class ChargesController < ApplicationController
 
 	  charge = Stripe::Charge.create({
 	    customer: customer.id,
-<<<<<<< HEAD
 	    amount: @amount.round * 100,
-=======
-	    amount: @amount.round*100,
->>>>>>> b68a947ef88109c6cfdb01812e40c03af7b6190e
 	    description: 'Rails Stripe customer',
 	    currency: 'eur',
 	  })
 	  if charge
-	  	@carts.each do |t|
-	  		Order.create(user_id: params[:user_id], item_id: t.item_id)
-	  	end
+	  	Order.create(user_id: params[:user_id], item_id: t.item_id)
 	  	flash[:sucess] = "Ta commande a bien été prise en compte !"
 	  	redirect_to root_path
 	  end

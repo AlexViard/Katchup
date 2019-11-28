@@ -10,8 +10,9 @@
 
     <p> Voici tes photos (entre nous tu es teubé parce qu'elles étaient gratuites sur pixabay)<p>
 
-       <% @item_image = Item.find(@order.item_id) %>
-       <img src =" <%= @item_image.image_url %>" >
+      <% @cart_item.each do |t| %>
+        <img src ="<%=Item.find(t.item_id).image_url %>">
+      <%end%>
 
       Pour accéder à ton espace client, connecte-toi via : <%=link_to 'ce lien', @url %>. Bienvenue dans l'univers des chatons!
     </p>

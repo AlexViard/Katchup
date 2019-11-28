@@ -11,12 +11,12 @@ Rails.application.routes.draw do
   resources :orders
 
   namespace :admin do
-  root 'admins#index'
-  resources :admins
-  resources :users
-  resources :items
-  resources :orders
-end
+    root 'admins#index'
+    resources :admins
+    resources :users
+    resources :items
+    resources :orders
+  end
 
   resources :teams, only:[:index]
   resources :contacts, only:[:index]
