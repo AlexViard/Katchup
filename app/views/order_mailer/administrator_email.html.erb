@@ -10,7 +10,11 @@
 
     <p> Voici les photos commandées:</p>
 
-  
+   
+
+  <% @item_image = Item.find(@order.item_id) %>
+  <img src =" <%= @item_image.image_url %>" >
+
 
   </body>
 </html>
