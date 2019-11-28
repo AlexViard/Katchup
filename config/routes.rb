@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
   root 'items#index'
   devise_for :users
-<<<<<<< HEAD
-  
+
   resources :users  do 
   	resources :charges, only: [:create]
   	resources :carts, only: [:show,:destroy,:create], :path => "mon_panier"
-=======
+    resources :avatar, only: [:create]
 
-  resources :users do
->>>>>>> 4a5c1f9fc7a205e3a42ff8fc376dd9a2caab0d3d
-  	resources :avatar, only: [:create]
+
+  	
   end
   resources :charges, only: [:create]
   resources :carts, only: [:show,:destroy,:create]
