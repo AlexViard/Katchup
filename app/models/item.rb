@@ -1,6 +1,5 @@
 class Item < ApplicationRecord
 	has_many :carts, through: :cart_item
-	has_many :orders
 
   	validates :title, presence: true,
 	length: {minimum: 5, maximum: 140},

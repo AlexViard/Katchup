@@ -5,15 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Order.destroy_all
+CartItem.destroy_all
+Cart.destroy_all
+User.destroy_all
+Item.destroy_all
 
-@i = Item.all
-CartItem.where(item_id: @i.ids).destroy_all
-@i.destroy_all
-@us = User.all
-@ca = Cart.all
-Order.where(cart_id:@ca.ids).destroy_all
-Cart.where(user_id:@us.ids).destroy_all
-@us.destroy_all
 
 
 

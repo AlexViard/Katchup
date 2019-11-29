@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-	has_many :cart_items
+	has_many :carts
 
 	after_create :customer_email
 	after_create :administrator_email
